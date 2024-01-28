@@ -2549,6 +2549,23 @@ form textarea::placeholder {
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 }
 
+.bg-popular-darkest {
+  background-color: #222831;
+}
+
+.bg-popular-dark {
+  background-color: #393E46;
+}
+
+.bg-popular-teal {
+  background-color: #00ADB5;
+}
+
+.bg-popular-gray {
+  background-color: #EEEEEE;
+}
+
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -25720,6 +25737,22 @@ form textarea::placeholder {
 .text-white {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.text-popular-darkest {
+  color: #222831;
+}
+
+.text-popular-dark {
+  color: #393E46;
+}
+
+.text-popular-teal {
+  color: #00ADB5;
+}
+
+.text-popular-gray {
+  color: #EEEEEE;
 }
 
 .text-gray-50 {
