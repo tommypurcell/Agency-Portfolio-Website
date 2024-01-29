@@ -6,7 +6,7 @@
 @layer components {
   /* #region DEFAULTS */
   html {
-    @apply font-kufam bg-yellow-50 h-full;
+    @apply font-kufam bg-white h-full;
   }
   /* #endregion */
 
