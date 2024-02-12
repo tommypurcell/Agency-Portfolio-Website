@@ -586,7 +586,6 @@ video {
 
 html {
   --tw-bg-opacity: 1;
-  background-color: rgba(255, 251, 235, var(--tw-bg-opacity));
   font-family: Kufam;
   height: 100%;
 }
@@ -90661,7 +90660,10 @@ form textarea::placeholder {
     --tw-text-opacity: 1;
     color: rgba(55, 65, 81, var(--tw-text-opacity));
   }
-
+  .group:hover .md\:group-hover\:text-popular-teal {
+    --tw-text-opacity: 1;
+    color: #00ADB5
+  }
   .group:hover .md\:group-hover\:text-gray-800 {
     --tw-text-opacity: 1;
     color: rgba(31, 41, 55, var(--tw-text-opacity));
