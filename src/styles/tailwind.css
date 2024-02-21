@@ -180,3 +180,11 @@
 .nav_content {
   background-color: white;
 }
+
+.get_quote {
+  background-image: url(../images/people-having-fun.jpg);
+  background-position: center;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 80% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 80% 100%, 0 100%);
+}
