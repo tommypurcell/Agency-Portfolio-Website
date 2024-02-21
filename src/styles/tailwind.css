@@ -138,3 +138,45 @@
   /* #region Extra Utilities */
   /* #endregion */
 }
+
+
+.get_quote {
+  background-image: url(../images/quote_deck.jpg);
+  background-position: center;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 80% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 80% 100%, 0 100%);
+}
+
+@media screen and (max-width: 667px) {
+  .get_quote {
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+
+/* orange buttons and dark blue backgrounds */
+.more {
+  color: #F28C28
+}
+
+.find-out-more {
+  background-color: #F28C28
+
+}
+
+.cta-bottom {
+  background-color: #111827
+}
+
+.cta-bottom a {
+  background-color: #F28C28
+}
+
+.footer {
+  background-color: #111827;
+}
+
+.nav_content {
+  background-color: white;
+}

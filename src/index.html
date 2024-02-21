@@ -22,10 +22,8 @@
 </head>
 
 <body class="bg-white">
-
-  <!--start of hero (landing) section-->
-  <section class="relative lg:h-screen">
-    <!-- Start of header -->
+  <!-- CTA (Get a Quote) Section -->
+  <section class="min-h-screen flex flex-col lg:flex-row gap-x-2 bg-gray-900">
     <header class="absolute w-full z-10">
       <nav class="lg:max-w-screen-xl  flex flex-row flex-wrap justify-between my-4 lg:my-6 ml-auto mr-auto "
         role="navigation">
@@ -84,30 +82,46 @@
           </button>
         </div>
         <div id="nav_content"
-          class="w-full hidden bg-white py-8 lg:flex lg:w-auto lg:py-0 lg:items-center rounded-br-full shadow-lg lg:shadow-none z-20">
-          <ul class="flex flex-col ml-auto text-md text-gray-700 font-semibold lg:flex-row">
-            <li class="mx-6 w-mc hover:text-gray-900 mb-4 lg:mb-0"><a href="/growth_tips.html">GROWTH TIPS</a></li>
-            <li class="mx-6 w-mc hover:text-gray-900 mb-4 lg:mb-0"><a href="/about.html">ABOUT</a></li>
-            <li class="mx-6 w-mc hover:text-gray-900 mb-4 lg:mb-0"><a href="/contact.html">CONTACT</a></li>
+          class="w-full hidden py-8 lg:flex lg:w-auto lg:py-0 lg:items-center rounded-br-full shadow-lg lg:shadow-none z-20">
+          <ul class="flex flex-col ml-auto text-md text-white font-semibold lg:flex-row">
+            <li class="mx-6 w-mc hover:text-gray-400 mb-4 lg:mb-0"><a href="/growth_tips.html">GROWTH TIPS</a></li>
+            <li class="mx-6 w-mc hover:text-gray-400 mb-4 lg:mb-0"><a href="/about.html">ABOUT</a></li>
+            <li class="mx-6 w-mc hover:text-gray-400 mb-4 lg:mb-0"><a href="/contact.html">CONTACT</a></li>
           </ul>
         </div>
         </div>
       </nav>
     </header>
-
-    <div class="flex flex-col lg:flex-row items-center justify-center w-full h-full pb-16 lg:pb-0 pt-24 lg:pt-0">
-      <div class="w-3/4 lg:w-1/2 text-start text-popular-dark">
-        <span class="block uppercase text-sm lg:text-base lg:font-semibold mb-2 lg:mb-4 ">I help businesses</span>
-        <h1 class="text-5xl lg:text-7xl uppercase font-medium mb-4 lg:mb-8">Get <span class="text-popular-teal">more</span> <span class="block font-black">customers</span>with strategic web design.</h1>
-        <a class="inline-block uppercase text-sm text-center font-bold px-5 py-3 lg:px-10 lg:py-4 rounded-tr-3xl rounded-bl-3xl text-white bg-popular-teal hover:bg-gray-700 focus:ring-2 focus:ring-yellow-300" href="/contact.html">Find out more</a>
+    <div class="get_quote h-96 lg:h-auto relative w-full flex flex-col justify-center items-center">
+      <!-- Dark Overlay -->
+      <div class="absolute top-0 left-0 w-full h-full bg-gray-800 opacity-40 z-10">
       </div>
-        <img class="hidden w-1/4 lg:block object-cover rounded-lg" src="./images/professional-headshot.jpg" alt="">          
+      <div class="relative z-20">
+        <!-- <span class="uppercase tracking-widest font-medium text-lg text-gray-100">Save today</span> -->
+        <!-- <h2 class=" font-semibold text-5xl text-gray-50">Get a Quote</h2> -->
+      </div>
+    </div>
+    <div class="flex items-center lg:w-3/4">
+      <!-- Contact Form -->
+      <div class="flex-grow justify-center px-8 lg:px-20 py-20 lg:py-24">
+        <div class="flex justify-center">
+          <div class="flex flex-col lg:flex-row items-center justify-center w-full h-full pb-16 lg:pb-0 pt-24 lg:pt-0">
+            <div class="w-full lg:w-full text-start text-popular-dark">
+              <h1 class="text-5xl text-white lg:text-7xl uppercase font-medium mb-4 lg:mb-8">Get <span class="more text-red-600">more</span> <span class="block font-black">customers</span>with strategic web design.</h1>
+              <a class="inline-block uppercase text-sm find-out-more text-center font-bold px-5 py-3 lg:px-10 lg:py-4 rounded-tr-3xl rounded-bl-3xl text-white bg-red-600 hover:bg-gray-700 focus:ring-2 focus:ring-yellow-300" href="/contact.html">Find out more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   </section>
+  <!--start of hero (landing) section-->
+
   <!--end of hero (landing) section-->
 
   <!-- Start of Services section -->
-  <section class="py-16 lg:py-24 shadow-inner  bg-popular-gray">
+  <section class="py-16 lg:py-24 shadow-inner">
     <div class="lg:flex justify-center gap-x-10">
       <!-- Service 1-->
       <div class="mx-4 md:w-2/3 md:mx-auto mb-16 lg:mx-0 lg:mb-0 lg:w-80 flex flex-col items-center">
@@ -145,10 +159,11 @@
   </section>
 
   <!-- Growth Tips section -->
-  <section class="flex justify-center mx-4 md:w-2/3 md:mx-auto pt-24 lg:pt-30 pb-32 lg:pb-40">
-    <div class="lg:flex items-center justify-center gap-x-14">
+  <section id="growth-tips" class="flex justify-center px-4 bg-gray-300 w-full lg:w-1/2 p-0 m-0 lg:rounded-r-full lg:w-full md:mx-auto pt-24 lg:pt-30 pb-32 lg:pb-40">
+    <div class="flex flex-col lg:flex-row justify-center items-center">
       <!-- decription -->
-      <div class="lg:w-1/2 mb-16 lg:mb-0">
+  
+      <div class="lg:w-1/2 mb-16 mx-6 lg:mb-0">
         <h2 class="inline-block text-3xl lg:text-4xl font-semibold uppercase text-popular-darkest">Grow Your Business</h2>
           <p class="leading-relaxed mt-10 mb-10 text-gray-700">
             At TJP Digital Media, we're more than just a web and marketing agency – we're your partners in growth.
@@ -159,84 +174,12 @@
       </div>
       <!-- Image -->
       <!-- <img src="./images/coffee_growth.png" alt="A happy cartoon woman holding a green growing plant."> -->
-      <svg class="h-1/2" viewBox="0 0 6.3500002 6.3500002" id="svg1976" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" fill="#222831"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs id="defs1970"></defs> <g id="layer1" style="display:inline"> <path d="m 0.26485,5.8204456 a 0.2645835,0.2645835 0 0 0 -0.26563,0.26563 0.2645835,0.2645835 0 0 0 0.26563,0.26367 h 5.82031 a 0.2645835,0.2645835 0 0 0 0.26562,-0.26367 0.2645835,0.2645835 0 0 0 -0.26562,-0.26563 z" id="path726" style="color:#222831;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#222831;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#222831;solid-opacity:1;vector-effect:none;fill:#222831;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#222831"></path> <path d="m 1.16328,3.9688856 c -0.34722,0 -0.63476,0.28754 -0.63476,0.63477 v 1.48242 a 0.26460996,0.26460996 0 0 0 0.26562,0.26367 h 1.0586 a 0.26460996,0.26460996 0 0 0 0.26367,-0.26367 v -1.48242 c 0,-0.34723 -0.28755,-0.63477 -0.63477,-0.63477 z" id="path728" style="color:#222831;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#222831;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#222831;solid-opacity:1;vector-effect:none;fill:#222831;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#222831"></path> <path d="m 3.0168,3.0684956 c -0.34722,0 -0.63477,0.28753 -0.63477,0.63477 v 2.38281 a 0.26460996,0.26460996 0 0 0 0.26367,0.26367 h 1.0586 a 0.26460996,0.26460996 0 0 0 0.26367,-0.26367 v -2.38281 c 0,-0.34724 -0.28755,-0.63477 -0.63477,-0.63477 z" id="path730" style="color:#222831;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#222831;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#222831;solid-opacity:1;vector-effect:none;fill:#222831;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#222831"></path> <path d="m 4.86836,2.2755256 c -0.34722,0 -0.63477,0.28754 -0.63477,0.63477 v 3.17578 a 0.26460996,0.26460996 0 0 0 0.26368,0.26367 h 1.05859 a 0.26460996,0.26460996 0 0 0 0.26563,-0.26367 v -3.17578 c 0,-0.34723 -0.2895,-0.63477 -0.63672,-0.63477 z" id="path732" style="color:#222831;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#222831;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#222831;solid-opacity:1;vector-effect:none;fill:#222831;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#222831"></path> <path d="M 4.6205208,2.5237e-4 A 0.2645835,0.2645835 0 0 0 4.3564534,0.26380219 0.2645835,0.2645835 0 0 0 4.6205208,0.52941905 H 4.8938883 C 3.3974791,1.8159538 1.8306324,2.6151331 0.2161369,2.9142865 A 0.2645835,0.2645835 0 0 0 0.0052984,3.2227949 0.2645835,0.2645835 0 0 0 0.3117388,3.4357016 C 2.050091,3.1136013 3.722697,2.2498105 5.2923138,0.88753671 V 1.1991456 A 0.2645835,0.2645835 0 0 0 5.5558626,1.4647625 0.2645835,0.2645835 0 0 0 5.8214805,1.1991456 V 0.41986501 C 5.8215308,0.19150501 5.62816,2.0237e-4 5.3998008,2.5237e-4 Z" id="path734" style="color:#222831;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#222831;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#222831;solid-opacity:1;vector-effect:none;fill:#222831;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#222831"></path> </g> </g></svg>
+      <svg class="h-1/4" viewBox="0 0 6.3500002 6.3500002" id="svg1976" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" fill="#222831"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs id="defs1970"></defs> <g id="layer1" style="display:inline"> <path d="m 0.26485,5.8204456 a 0.2645835,0.2645835 0 0 0 -0.26563,0.26563 0.2645835,0.2645835 0 0 0 0.26563,0.26367 h 5.82031 a 0.2645835,0.2645835 0 0 0 0.26562,-0.26367 0.2645835,0.2645835 0 0 0 -0.26562,-0.26563 z" id="path726" style="color:#222831;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#222831;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#222831;solid-opacity:1;vector-effect:none;fill:#222831;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#222831"></path> <path d="m 1.16328,3.9688856 c -0.34722,0 -0.63476,0.28754 -0.63476,0.63477 v 1.48242 a 0.26460996,0.26460996 0 0 0 0.26562,0.26367 h 1.0586 a 0.26460996,0.26460996 0 0 0 0.26367,-0.26367 v -1.48242 c 0,-0.34723 -0.28755,-0.63477 -0.63477,-0.63477 z" id="path728" style="color:#222831;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#222831;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#222831;solid-opacity:1;vector-effect:none;fill:#222831;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#222831"></path> <path d="m 3.0168,3.0684956 c -0.34722,0 -0.63477,0.28753 -0.63477,0.63477 v 2.38281 a 0.26460996,0.26460996 0 0 0 0.26367,0.26367 h 1.0586 a 0.26460996,0.26460996 0 0 0 0.26367,-0.26367 v -2.38281 c 0,-0.34724 -0.28755,-0.63477 -0.63477,-0.63477 z" id="path730" style="color:#222831;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#222831;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#222831;solid-opacity:1;vector-effect:none;fill:#222831;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#222831"></path> <path d="m 4.86836,2.2755256 c -0.34722,0 -0.63477,0.28754 -0.63477,0.63477 v 3.17578 a 0.26460996,0.26460996 0 0 0 0.26368,0.26367 h 1.05859 a 0.26460996,0.26460996 0 0 0 0.26563,-0.26367 v -3.17578 c 0,-0.34723 -0.2895,-0.63477 -0.63672,-0.63477 z" id="path732" style="color:#222831;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#222831;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#222831;solid-opacity:1;vector-effect:none;fill:#222831;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#222831"></path> <path d="M 4.6205208,2.5237e-4 A 0.2645835,0.2645835 0 0 0 4.3564534,0.26380219 0.2645835,0.2645835 0 0 0 4.6205208,0.52941905 H 4.8938883 C 3.3974791,1.8159538 1.8306324,2.6151331 0.2161369,2.9142865 A 0.2645835,0.2645835 0 0 0 0.0052984,3.2227949 0.2645835,0.2645835 0 0 0 0.3117388,3.4357016 C 2.050091,3.1136013 3.722697,2.2498105 5.2923138,0.88753671 V 1.1991456 A 0.2645835,0.2645835 0 0 0 5.5558626,1.4647625 0.2645835,0.2645835 0 0 0 5.8214805,1.1991456 V 0.41986501 C 5.8215308,0.19150501 5.62816,2.0237e-4 5.3998008,2.5237e-4 Z" id="path734" style="color:#222831;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#222831;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#222831;solid-opacity:1;vector-effect:none;fill:#222831;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#222831"></path> </g> </g></svg>
     </div>
   </section>
 
   <!-- Start of Testimonials section -->
-  <section class="flex flex-col shadow-inner rounded-r-10xl lg:rounded-r-full items-center pt-30 pb-40 bg-popular-gray">
-    <h2 class="inline-block text-3xl lg:text-4xl font-semibold uppercase text-gray-900 mb-18">Testimonials</h2>
 
-    <!-- testimonial container -->
-    <div class="lg:flex gap-x-10">
-
-      <!-- testimonial 1-->
-      <div class="mb-24 lg:mb-0">
-        <div class="flex items-center shadow-md w-89 h-89 p-10 rounded-tl-3xl rounded-br-3xl bg-white">
-          <p class="font-medium leading-relaxed">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
-            rhoncus mauris nunc
-            integer lectus risus. Molestie in a
-            lacinia sapien, sodales purus. Ultrices semper ornare ante. Molestie in a lacinia sapien, sodales purus.
-            Ultrices semper
-            ornare ante a lacinia nunc.”</p>
-        </div>
-        <div class="flex mt-10">
-          <div class="h-12 w-12 flex-shrink-0">
-            <img class="w-full h-full rounded-full shadow-inner" src="./images/Testimonials/smiling_man.png"
-              alt="A smiling man.">
-          </div>
-          <div class="ml-4">
-            <span class="block text-sm font-bold mt-2 tracking-wider text-popular-darkest">Thom Yorke</span>
-            <span class="block text-sm text-gray-500">Founder, Aroma</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- testimonial 2 -->
-      <div class="mb-24 lg:mb-0">
-        <div class="flex items-center shadow-md w-89 h-89 p-10 rounded-tl-3xl rounded-br-3xl bg-white">
-          <p class="font-medium leading-relaxed">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
-            rhoncus mauris nunc
-            integer lectus risus. Molestie in a
-            lacinia sapien, sodales purus. Ultrices semper ornare ante. Molestie in a lacinia sapien, sodales purus.
-            Ultrices semper
-            ornare ante a lacinia nunc.”</p>
-        </div>
-        <div class="flex mt-10">
-          <div class="h-12 w-12 flex-shrink-0">
-            <img class="w-full h-full rounded-full shadow-inner" src="./images/Testimonials/smiling_woman.jpg"
-              alt="A smiling woman.">
-          </div>
-          <div class="ml-4">
-            <span class="block text-sm font-bold mt-2 tracking-wider text-popular-darkest">Laura Misch</span>
-            <span class="block text-sm text-gray-500">Barista, Truth Coffee</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- testimonial 3 -->
-      <div>
-        <div class="flex items-center shadow-md w-89 h-89 p-10 rounded-tl-3xl rounded-br-3xl bg-white">
-          <p class="font-medium leading-relaxed">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
-            rhoncus mauris nunc
-            integer lectus risus. Molestie in a
-            lacinia sapien, sodales purus. Ultrices semper ornare ante. Molestie in a lacinia sapien, sodales purus.
-            Ultrices semper
-            ornare ante a lacinia nunc.”</p>
-        </div>
-        <div class="flex mt-10">
-          <div class="h-12 w-12 flex-shrink-0">
-            <img class="w-full h-full rounded-full shadow-inner" src="./images/Testimonials/smiling_man_2.jpg"
-              alt="A smiling man.">
-          </div>
-          <div class="ml-4">
-            <span class="block text-sm font-bold mt-2 tracking-wider text-popular-darkest">Rory Ferreira</span>
-            <span class="block text-sm text-gray-500">Owner, 17th Cafe</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Start of Previous Work section -->
   <section class="pt-24 lg:pt-40 pb-32 lg:pb-52">
@@ -321,8 +264,8 @@
   </section>
 
   <!-- Start of CTA section -->
-  <section class="py-24 shadow-inner bg-popular-gray">
-    <h2 class="text-center font-semibold text-xl lg:text-2xl mb-12 text-gray-900">Ready for more customers?</h2>
+  <section class="cta-bottom py-24 shadow-inner bg-popular-gray">
+    <h2 class="text-center font-semibold text-xl lg:text-2xl mb-12 text-white">Ready for more customers?</h2>
     <div class="text-center">
       <a class="inline-block uppercase font-bold px-5 py-3 lg:px-10 lg:py-4 rounded-tr-3xl text-sm lg:text-base rounded-bl-3xl bg-popular-teal text-white hover:bg-gray-700 focus:ring-2 focus:ring-yellow-300"
         href="/contact.html">Get in touch now</a>
@@ -331,7 +274,7 @@
 
 
   <!--Footer links and social media-->
-  <footer class="py-16 bg-popular-dark text-popular-gray">
+  <footer class="footer border-t-2 border-gray-800 py-16 bg-popular-dark text-popular-gray">
     <div class="flex flex-col lg:flex-row items-center justify-between mx-auto max-w-screen-xl">
       <div class="flex items-center">
         <!-- Logo SVG-->
