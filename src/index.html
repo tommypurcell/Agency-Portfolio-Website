@@ -25,7 +25,7 @@
   <!-- CTA (Get a Quote) Section -->
   <section class="min-h-screen flex flex-col lg:flex-row gap-x-2 bg-gray-900">
     <header class="absolute w-full z-10">
-      <nav class="lg:max-w-screen-xl  flex flex-row flex-wrap justify-between my-4 lg:my-6 ml-auto mr-auto "
+      <nav class="lg:max-w-screen-xl flex flex-row flex-wrap justify-between my-4 lg:my-6 ml-auto mr-auto "
         role="navigation">
         <!-- COMPANY LOGO (SVG) -->
         <div class="flex items-center ml-3">
@@ -69,41 +69,31 @@
         </div>
         <div class="inline-block h-8 mr-3 lg:hidden">
           <button id="nav_toggle" class="h-full w-full">
-            <svg class="h-full w-auto" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#4B5563"
-              viewBox="0 0 256 256">
+            <svg class="h-full w-auto" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffffff" viewBox="0 0 256 256">
               <rect width="256" height="256" fill="none"></rect>
-              <line x1="40" y1="128" x2="216" y2="128" stroke="#4B5563" stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="16"></line>
-              <line x1="40" y1="64" x2="216" y2="64" stroke="#4B5563" stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="16"></line>
-              <line x1="40" y1="192" x2="216" y2="192" stroke="#4B5563" stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="16"></line>
+              <line x1="40" y1="128" x2="216" y2="128" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+              <line x1="40" y1="64" x2="216" y2="64" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+              <line x1="40" y1="192" x2="216" y2="192" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
             </svg>
           </button>
+          
         </div>
-        <div id="nav_content"
-          class="w-full hidden py-8 lg:flex lg:w-auto lg:py-0 lg:items-center rounded-br-full shadow-lg lg:shadow-none z-20">
+        <div id="nav_content" class="w-full border-b-4 lg:border-b-0 border-gray-400 lg:bg-transparent py-8 lg:flex lg:w-auto lg:py-0 lg:items-center rounded-br-full shadow-lg shadow-red-800 lg:shadow-none mobile-nav-background">
           <ul class="flex flex-col ml-auto text-md text-white font-semibold lg:flex-row">
-            <li class="mx-6 w-mc hover:text-gray-400 mb-4 lg:mb-0"><a href="/growth_tips.html">GROWTH TIPS</a></li>
-            <li class="mx-6 w-mc hover:text-gray-400 mb-4 lg:mb-0"><a href="/about.html">ABOUT</a></li>
-            <li class="mx-6 w-mc hover:text-gray-400 mb-4 lg:mb-0"><a href="/contact.html">CONTACT</a></li>
+            <li class="mx-6 border-gray-400 border-b-2 lg:border-0 w-mc hover:text-gray-400 mb-4 lg:mb-0"><a href="/growth_tips.html">GROWTH TIPS</a></li>
+            <li class="mx-6 border-gray-400 border-b-2 lg:border-0 w-mc hover:text-gray-400 mb-4 lg:mb-0"><a href="/about.html">ABOUT</a></li>
+            <li class="mx-6 border-gray-400 border-b-2 lg:border-0 w-mc hover:text-gray-400 mb-4 lg:mb-0"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="mx-6 border-gray-400 border-b-2 lg:border-0 w-mc hover:text-gray-400 mb-4 lg:mb-0"><a href="/contact.html">CONTACT</a></li>
           </ul>
         </div>
-        </div>
+        
+        
+
       </nav>
     </header>
-    <div class="get_quote h-96 lg:h-auto relative w-full flex flex-col justify-center items-center">
-      <!-- Dark Overlay -->
-      <div class="absolute top-0 left-0 w-full h-full bg-gray-800 opacity-40 z-10">
-      </div>
-      <div class="relative z-20">
-        <!-- <span class="uppercase tracking-widest font-medium text-lg text-gray-100">Save today</span> -->
-        <!-- <h2 class=" font-semibold text-5xl text-gray-50">Get a Quote</h2> -->
-      </div>
-    </div>
     <div class="flex items-center lg:w-3/4">
       <!-- Contact Form -->
-      <div class="flex-grow justify-center px-8 lg:px-20 py-20 lg:py-24">
+      <div class="flex-grow justify-center px-8 lg:px-20 lg:py-24">
         <div class="flex justify-center">
           <div class="flex flex-col lg:flex-row items-center justify-center w-full h-full pb-16 lg:pb-0 pt-24 lg:pt-0">
             <div class="w-full lg:w-full text-start text-popular-dark">
@@ -114,6 +104,16 @@
         </div>
       </div>
     </div>
+    <div class="hero-img h-64 lg:h-96 lg:h-auto relative w-full flex flex-col justify-center items-center">
+      <!-- Dark Overlay -->
+      <div class="absolute top-0 left-0 w-full h-full bg-gray-800 opacity-40 z-10">
+      </div>
+      <div class="relative z-20">
+        <!-- <span class="uppercase tracking-widest font-medium text-lg text-gray-100">Save today</span> -->
+        <!-- <h2 class=" font-semibold text-5xl text-gray-50">Get a Quote</h2> -->
+      </div>
+    </div>
+    
     </div>
   </section>
   <!--start of hero (landing) section-->
@@ -183,7 +183,7 @@
 
   <!-- Start of Previous Work section -->
   <section class="pt-24 lg:pt-40 pb-32 lg:pb-52">
-    <h2 class="text-center text-3xl lg:text-4xl font-semibold uppercase text-gray-900 mb-20 lg:mb-24">Previous Work
+    <h2 id="portfolio" class="text-center text-3xl lg:text-4xl font-semibold uppercase text-gray-900 mb-20 lg:mb-24">Previous Work
     </h2>
 
     <!-- project 1 -->
@@ -291,17 +291,17 @@
         </a>
       </div>
       <ul class="flex flex-col lg:flex-row items-center text-sm font-semibold text-popular-gray py-12 lg:py-0">
-        <li class="mx-7 hover:text-gray-500 mb-2 lg:mb-0">
+        <li class="mx-7 text-gray-300 hover:text-gray-500 mb-2 lg:mb-0">
           <a href="/growth_tips.html">GROWTH TIPS</a>
         </li>
 
-        <li class="mx-7 hover:text-gray-500 mb-2 lg:mb-0">
+        <li class="mx-7 text-white hover:text-gray-500 mb-2 lg:mb-0">
           <a href="/contact.html">CONTACT</a>
         </li>
       </ul>
       <div class="flex text-popular-gray">
         <!-- Twitter Logo -->
-        <a class="hover:text-gray-500" href="/">
+        <a class="text-gray-200 hover:text-gray-500" href="/">
           <svg class="mx-4 fill-current" width="21" height="17" viewBox="0 0 21 17" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <title>Twitter</title>
@@ -310,7 +310,7 @@
           </svg>
         </a>
         <!-- Facebook Logo -->
-        <a class="hover:text-gray-500" href="/">
+        <a class="text-white hover:text-gray-500" href="/">
           <svg class="mx-4 fill-current" width="20" height="20" viewBox="0 0 20 20" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <title>Facebook</title>
@@ -319,7 +319,7 @@
           </svg>
         </a>
         <!-- Instagram Logo -->
-        <a class="hover:text-gray-500" href="/">
+        <a class="text-gray-300 hover:text-gray-500" href="/">
           <svg class="mx-4 fill-current" width="20" height="20" viewBox="0 0 20 20" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <title>Instagram</title>
@@ -331,8 +331,8 @@
     </div>
 
     <!-- Fine Print-->
-    <div class="flex flex-col items-center mt-24 text-xs text-popular-gray">
-      <span>&copy; Coffee Shop Specialist 2021</span>
+    <div class="flex flex-col items-center mt-24 text-gray-400 text-xs text-popular-gray">
+      <span>&copy; TJP Digital Media 2024</span>
     </div>
   </footer>
 

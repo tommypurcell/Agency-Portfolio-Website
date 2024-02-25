@@ -9,9 +9,12 @@
 (function buttonControlInit() {
   const navToggle = document.querySelector("#nav_toggle");
   const navContent = document.querySelector("#nav_content");
+  const nav = document.querySelector("nav");
 
   function toggleNav() {
     navContent.classList.toggle("hidden");
+    navContent.classList.toggle("mobile-nav-background")
+
   }
 
   navToggle.addEventListener("click", toggleNav);

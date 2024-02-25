@@ -194105,7 +194105,7 @@ form textarea::placeholder {
 }
 
 
-.get_quote {
+.hero-img {
   background-image: url(../images/people-having-fun.jpg);
   background-position: center;
   background-size: cover;
@@ -194153,3 +194153,9 @@ form textarea::placeholder {
   height:850px;
   margin-left: 0;
 }
+
+
+.nav_toggle {
+  background-color: red;
+}
+
