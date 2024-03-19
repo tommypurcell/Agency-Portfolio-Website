@@ -13,7 +13,7 @@
 
   function toggleNav() {
     navContent.classList.toggle("hidden");
-    navContent.classList.toggle("mobile-nav-background")
+
 
   }
 
