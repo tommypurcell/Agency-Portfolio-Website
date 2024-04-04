@@ -173,7 +173,7 @@
     <!--end of hero (landing) section-->
     <section>
       <div class="flex justify-center mt-24">
-        <div class="w-1/2">
+        <div class="w-3/4 md:w-1/2">
           <h1 class="text-xl text-center lg:text-start md:text-2xl lg:text-4xl font-bold lg:whitespace-nowrap">
             Welcome to TJP Digital Media
           </h1>
@@ -189,8 +189,8 @@
 
           <p class="home-paragraph">
             I started TJP Digital Media in early 2023. My focus was to generate a side-income while I was working a
-            full-time job and this website started off as a resource for others interested in how they can grow their
-            business online.
+            full-time job and this website started off offering a service and resource for small business owners to grow
+            their business online.
           </p>
 
           <br />
@@ -203,25 +203,35 @@
           <br />
 
           <p class="home-paragraph">
-            This brings us to today, where I'm fortunate enough to share my web development skills with small business
-            owners like you.
+            This brings us to today, where I'm fortunate enough to share my results-focused digital skills with small
+            business owners like you.
           </p>
 
           <br />
 
           <p class="home-paragraph">
-            <strong>If you're new here</strong>, start by reading the <a href="/src/growth_tips.html"><u>Blog</u></a> or
-            check out my
-            <a href="https://studywebdevelopment.com/podcast.html"><u>Instagram</u></a>
+            See thats just it; you can hire anybody to simply build you a website. But hiring someone to build you a
+            website that <strong><em>works</em></strong> is another story. That's why I'm here!
           </p>
+
           <br />
+
+          <div class="flex flex-col lg:flex-row gap-x-5">
+            <div>
+              <strong>If you're new here</strong>
+
+              start by reading the
+              <a href="/src/growth_tips.html"><u>Blog</u></a> or shoot me an Email:
+              <span class="text-sm">tommy@tjpdigitalmedia.com</span>
+            </div>
+          </div>
+
           <br />
+
           <p class="home-paragraph">Thanks for being here,</p>
           <br />
 
           <p class="home-paragraph">- Tommy</p>
-          <br />
-
           <br />
         </div>
       </div>
@@ -977,4 +987,22 @@
   </body>
 
   <script src="js/nav.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+  <script>
+    let clipboard = new ClipboardJS('#copy-btn')
+
+    function changeButton() {
+      let copyText = document.getElementById('copyText')
+      let copiedText = document.getElementById('copiedText')
+      let button = document.getElementById('copy-btn')
+
+      // This checks if 'hidden' class is applied to copyText and toggles accordingly
+      if (copiedText.classList.contains('hidden')) {
+        copyText.classList.add('hidden')
+        copiedText.classList.remove('hidden')
+      }
+    }
+    document.getElementById('copy-btn').onclick = changeButton
+  </script>
 </html>
