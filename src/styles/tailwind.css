@@ -3,10 +3,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* custom css */
+.custom-h1 {
+  font-size: 6em;
+  font-weight: 700;
+  color: white;
+  font-family: Rubik, sans-serif;
+  /* font-family: 'proxima-nova', sans-serif; */
+  line-height: 1em;
+}
+
+.hero-text {
+  font-size: 5em;
+  font-weight: 700;
+  margin: 40px 0 16px;
+  line-height: 1em;
+}
+
+@media (max-width: 800px) {
+  .hero-text {
+    font-size: 3em;
+  }
+}
+
 @layer components {
   /* #region DEFAULTS */
   html {
-    @apply font-kufam bg-white h-full;
+    @apply bg-white h-full;
   }
   /* #endregion */
 

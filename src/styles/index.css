@@ -3,32 +3,7 @@
 /* ! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-/* custom css */
-.custom-h1 {
-  font-size: 6em;
-  font-weight: 700;
-  color: white;
-  font-family: Rubik, sans-serif;
-  /* font-family: 'proxima-nova', sans-serif; */
-  line-height: 1em;
-}
-
-.hero-text {
-  font-size: 5em;
-  font-weight: 700;
-  margin: 40px 0 16px;
-  line-height: 1em;
-}
-
-@media (max-width: 800px) {
-  .hero-text {
-    font-size: 3em;
-  }
-}
 /*
 Document
 ========
@@ -44,11 +19,6 @@ Use a better box model (opinionated).
   box-sizing: border-box;
 }
 
-.content {
-  font-size: 20px;
-  color: #595665;
-}
-
 /**
 Use a more readable tab size (opinionated).
 */
@@ -56,7 +26,7 @@ Use a more readable tab size (opinionated).
 html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
-  tab-size: 4;
+     tab-size: 4;
 }
 
 /**
@@ -89,7 +59,16 @@ Improve consistency of default fonts in all browsers. (https://github.com/sindre
 */
 
 body {
-  font-family: Rubik, sans-serif;
+  font-family:
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
 }
 
 /*
@@ -120,7 +99,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -141,7 +120,13 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -390,21 +375,7 @@ ul {
  */
 
 html {
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    'Noto Sans',
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 1 */
   line-height: 1.5;
   /* 2 */
@@ -485,8 +456,7 @@ textarea {
   resize: vertical;
 }
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   color: #9ca3af;
 }
@@ -498,7 +468,7 @@ textarea::placeholder {
 }
 
 button,
-[role='button'] {
+[role="button"] {
   cursor: pointer;
 }
 
@@ -567,7 +537,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /**
@@ -622,9 +592,7 @@ video {
   display: none;
 }
 
-*,
-::before,
-::after {
+*, ::before, ::after {
   --tw-border-opacity: 1;
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
@@ -669,7 +637,6 @@ html {
   height: 100%;
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  font-family: 'Roboto', sans-serif;
 }
 
 /* #endregion */
@@ -713,8 +680,7 @@ form .input-animated input::placeholder {
   color: transparent;
 }
 
-form .input-animated input,
-form .input-animated label {
+form .input-animated input, form .input-animated label {
   --tw-text-opacity: 1;
   color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
@@ -745,35 +711,12 @@ form .input-animated label:after {
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
-    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-translate-x: -100%;
   border-bottom-width: 2px;
-  transition-property:
-    background-color,
-    border-color,
-    color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    -webkit-backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter;
-  transition-property:
-    background-color,
-    border-color,
-    color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    backdrop-filter,
-    -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   transition-duration: 300ms;
@@ -789,33 +732,31 @@ form .input-animated label span {
 
 /* only works for adjacent elements below the initial element */
 
-form .input-animated input:not(:-moz-placeholder-shown) + label:after,
-form textarea:not(:-moz-placeholder-shown) {
+form .input-animated input:not(:-moz-placeholder-shown) + label:after, form textarea:not(:-moz-placeholder-shown) {
   border-color: var(--error);
 }
 
 form .input-animated input:not(:placeholder-shown) + label:after,
-form textarea:not(:placeholder-shown) {
+  form textarea:not(:placeholder-shown) {
   border-color: var(--error);
 }
 
-form .input-animated input:not(:-moz-placeholder-shown) + .label-name .content-name,
-form .input-animated input:not(:-moz-placeholder-shown) + .label-email .content-email {
+form .input-animated input:not(:-moz-placeholder-shown) + .label-name .content-name, form .input-animated input:not(:-moz-placeholder-shown) + .label-email .content-email {
   color: var(--error);
 }
 
 form .input-animated input:not(:placeholder-shown) + .label-name .content-name,
-form .input-animated input:not(:placeholder-shown) + .label-email .content-email {
+  form .input-animated input:not(:placeholder-shown) + .label-email .content-email {
   color: var(--error);
 }
 
 form .input-animated input:valid + .label-name .content-name,
-form .input-animated input:valid + .label-email .content-email {
+  form .input-animated input:valid + .label-email .content-email {
   color: var(--success);
 }
 
 form .input-animated input:valid + label:after,
-form textarea:valid {
+  form textarea:valid {
   border-color: var(--success);
 }
 
@@ -824,8 +765,8 @@ form .input-animated input:not(:-moz-placeholder-shown) + label span {
 }
 
 form .input-animated input:focus + label span,
-form .input-animated input:valid + label span,
-form .input-animated input:not(:placeholder-shown) + label span {
+  form .input-animated input:valid + label span,
+  form .input-animated input:not(:placeholder-shown) + label span {
   transform: translateY(-200%);
 }
 
@@ -835,9 +776,7 @@ form .input-animated input:not(:-moz-placeholder-shown) + label span {
   font-weight: 500;
 }
 
-form .input-animated input:focus + label span,
-form .input-animated input:valid + label span,
-form .input-animated input:not(:placeholder-shown) + label span {
+form .input-animated input:focus + label span, form .input-animated input:valid + label span, form .input-animated input:not(:placeholder-shown) + label span {
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 500;
@@ -848,8 +787,8 @@ form input:not(:-moz-placeholder-shown) + label:after {
 }
 
 form .input-animated input:focus + label:after,
-form input:valid + label:after,
-form input:not(:placeholder-shown) + label:after {
+  form input:valid + label:after,
+  form input:not(:placeholder-shown) + label:after {
   transform: translateX(0%);
 }
 
@@ -8171,8 +8110,7 @@ form textarea::placeholder {
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
-    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform-gpu {
@@ -8183,8 +8121,7 @@ form textarea::placeholder {
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate))
-    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform-none {
@@ -10969,23 +10906,23 @@ form textarea::placeholder {
 }
 
 .scale-50 {
-  --tw-scale-x: 0.5;
-  --tw-scale-y: 0.5;
+  --tw-scale-x: .5;
+  --tw-scale-y: .5;
 }
 
 .scale-75 {
-  --tw-scale-x: 0.75;
-  --tw-scale-y: 0.75;
+  --tw-scale-x: .75;
+  --tw-scale-y: .75;
 }
 
 .scale-90 {
-  --tw-scale-x: 0.9;
-  --tw-scale-y: 0.9;
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
 }
 
 .scale-95 {
-  --tw-scale-x: 0.95;
-  --tw-scale-y: 0.95;
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
 }
 
 .scale-100 {
@@ -11019,23 +10956,23 @@ form textarea::placeholder {
 }
 
 .hover\:scale-50:hover {
-  --tw-scale-x: 0.5;
-  --tw-scale-y: 0.5;
+  --tw-scale-x: .5;
+  --tw-scale-y: .5;
 }
 
 .hover\:scale-75:hover {
-  --tw-scale-x: 0.75;
-  --tw-scale-y: 0.75;
+  --tw-scale-x: .75;
+  --tw-scale-y: .75;
 }
 
 .hover\:scale-90:hover {
-  --tw-scale-x: 0.9;
-  --tw-scale-y: 0.9;
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
 }
 
 .hover\:scale-95:hover {
-  --tw-scale-x: 0.95;
-  --tw-scale-y: 0.95;
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
 }
 
 .hover\:scale-100:hover {
@@ -11069,23 +11006,23 @@ form textarea::placeholder {
 }
 
 .focus\:scale-50:focus {
-  --tw-scale-x: 0.5;
-  --tw-scale-y: 0.5;
+  --tw-scale-x: .5;
+  --tw-scale-y: .5;
 }
 
 .focus\:scale-75:focus {
-  --tw-scale-x: 0.75;
-  --tw-scale-y: 0.75;
+  --tw-scale-x: .75;
+  --tw-scale-y: .75;
 }
 
 .focus\:scale-90:focus {
-  --tw-scale-x: 0.9;
-  --tw-scale-y: 0.9;
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
 }
 
 .focus\:scale-95:focus {
-  --tw-scale-x: 0.95;
-  --tw-scale-y: 0.95;
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
 }
 
 .focus\:scale-100:focus {
@@ -11118,19 +11055,19 @@ form textarea::placeholder {
 }
 
 .scale-x-50 {
-  --tw-scale-x: 0.5;
+  --tw-scale-x: .5;
 }
 
 .scale-x-75 {
-  --tw-scale-x: 0.75;
+  --tw-scale-x: .75;
 }
 
 .scale-x-90 {
-  --tw-scale-x: 0.9;
+  --tw-scale-x: .9;
 }
 
 .scale-x-95 {
-  --tw-scale-x: 0.95;
+  --tw-scale-x: .95;
 }
 
 .scale-x-100 {
@@ -11158,19 +11095,19 @@ form textarea::placeholder {
 }
 
 .scale-y-50 {
-  --tw-scale-y: 0.5;
+  --tw-scale-y: .5;
 }
 
 .scale-y-75 {
-  --tw-scale-y: 0.75;
+  --tw-scale-y: .75;
 }
 
 .scale-y-90 {
-  --tw-scale-y: 0.9;
+  --tw-scale-y: .9;
 }
 
 .scale-y-95 {
-  --tw-scale-y: 0.95;
+  --tw-scale-y: .95;
 }
 
 .scale-y-100 {
@@ -11198,19 +11135,19 @@ form textarea::placeholder {
 }
 
 .hover\:scale-x-50:hover {
-  --tw-scale-x: 0.5;
+  --tw-scale-x: .5;
 }
 
 .hover\:scale-x-75:hover {
-  --tw-scale-x: 0.75;
+  --tw-scale-x: .75;
 }
 
 .hover\:scale-x-90:hover {
-  --tw-scale-x: 0.9;
+  --tw-scale-x: .9;
 }
 
 .hover\:scale-x-95:hover {
-  --tw-scale-x: 0.95;
+  --tw-scale-x: .95;
 }
 
 .hover\:scale-x-100:hover {
@@ -11238,19 +11175,19 @@ form textarea::placeholder {
 }
 
 .hover\:scale-y-50:hover {
-  --tw-scale-y: 0.5;
+  --tw-scale-y: .5;
 }
 
 .hover\:scale-y-75:hover {
-  --tw-scale-y: 0.75;
+  --tw-scale-y: .75;
 }
 
 .hover\:scale-y-90:hover {
-  --tw-scale-y: 0.9;
+  --tw-scale-y: .9;
 }
 
 .hover\:scale-y-95:hover {
-  --tw-scale-y: 0.95;
+  --tw-scale-y: .95;
 }
 
 .hover\:scale-y-100:hover {
@@ -11278,19 +11215,19 @@ form textarea::placeholder {
 }
 
 .focus\:scale-x-50:focus {
-  --tw-scale-x: 0.5;
+  --tw-scale-x: .5;
 }
 
 .focus\:scale-x-75:focus {
-  --tw-scale-x: 0.75;
+  --tw-scale-x: .75;
 }
 
 .focus\:scale-x-90:focus {
-  --tw-scale-x: 0.9;
+  --tw-scale-x: .9;
 }
 
 .focus\:scale-x-95:focus {
-  --tw-scale-x: 0.95;
+  --tw-scale-x: .95;
 }
 
 .focus\:scale-x-100:focus {
@@ -11318,19 +11255,19 @@ form textarea::placeholder {
 }
 
 .focus\:scale-y-50:focus {
-  --tw-scale-y: 0.5;
+  --tw-scale-y: .5;
 }
 
 .focus\:scale-y-75:focus {
-  --tw-scale-y: 0.75;
+  --tw-scale-y: .75;
 }
 
 .focus\:scale-y-90:focus {
-  --tw-scale-y: 0.9;
+  --tw-scale-y: .9;
 }
 
 .focus\:scale-y-95:focus {
-  --tw-scale-y: 0.95;
+  --tw-scale-y: .95;
 }
 
 .focus\:scale-y-100:focus {
@@ -11360,8 +11297,7 @@ form textarea::placeholder {
 }
 
 @keyframes ping {
-  75%,
-  100% {
+  75%, 100% {
     transform: scale(2);
     opacity: 0;
   }
@@ -11369,20 +11305,19 @@ form textarea::placeholder {
 
 @keyframes pulse {
   50% {
-    opacity: 0.5;
+    opacity: .5;
   }
 }
 
 @keyframes bounce {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
 
   50% {
     transform: none;
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
 
@@ -11440,26 +11375,26 @@ form textarea::placeholder {
 
 .select-none {
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .select-text {
   -webkit-user-select: text;
-  -moz-user-select: text;
-  user-select: text;
+     -moz-user-select: text;
+          user-select: text;
 }
 
 .select-all {
   -webkit-user-select: all;
-  -moz-user-select: all;
-  user-select: all;
+     -moz-user-select: all;
+          user-select: all;
 }
 
 .select-auto {
   -webkit-user-select: auto;
-  -moz-user-select: auto;
-  user-select: auto;
+     -moz-user-select: auto;
+          user-select: auto;
 }
 
 .resize-none {
@@ -11500,8 +11435,8 @@ form textarea::placeholder {
 
 .appearance-none {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .auto-cols-auto {
@@ -11954,207 +11889,207 @@ form textarea::placeholder {
 
 .gap-x-0 {
   -moz-column-gap: 0px;
-  column-gap: 0px;
+       column-gap: 0px;
 }
 
 .gap-x-1 {
   -moz-column-gap: 0.25rem;
-  column-gap: 0.25rem;
+       column-gap: 0.25rem;
 }
 
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
-  column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .gap-x-3 {
   -moz-column-gap: 0.75rem;
-  column-gap: 0.75rem;
+       column-gap: 0.75rem;
 }
 
 .gap-x-4 {
   -moz-column-gap: 1rem;
-  column-gap: 1rem;
+       column-gap: 1rem;
 }
 
 .gap-x-5 {
   -moz-column-gap: 1.25rem;
-  column-gap: 1.25rem;
+       column-gap: 1.25rem;
 }
 
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
-  column-gap: 1.5rem;
+       column-gap: 1.5rem;
 }
 
 .gap-x-7 {
   -moz-column-gap: 1.75rem;
-  column-gap: 1.75rem;
+       column-gap: 1.75rem;
 }
 
 .gap-x-8 {
   -moz-column-gap: 2rem;
-  column-gap: 2rem;
+       column-gap: 2rem;
 }
 
 .gap-x-9 {
   -moz-column-gap: 2.25rem;
-  column-gap: 2.25rem;
+       column-gap: 2.25rem;
 }
 
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
-  column-gap: 2.5rem;
+       column-gap: 2.5rem;
 }
 
 .gap-x-11 {
   -moz-column-gap: 2.75rem;
-  column-gap: 2.75rem;
+       column-gap: 2.75rem;
 }
 
 .gap-x-12 {
   -moz-column-gap: 3rem;
-  column-gap: 3rem;
+       column-gap: 3rem;
 }
 
 .gap-x-14 {
   -moz-column-gap: 3.5rem;
-  column-gap: 3.5rem;
+       column-gap: 3.5rem;
 }
 
 .gap-x-16 {
   -moz-column-gap: 4rem;
-  column-gap: 4rem;
+       column-gap: 4rem;
 }
 
 .gap-x-18 {
   -moz-column-gap: 4.5rem;
-  column-gap: 4.5rem;
+       column-gap: 4.5rem;
 }
 
 .gap-x-20 {
   -moz-column-gap: 5rem;
-  column-gap: 5rem;
+       column-gap: 5rem;
 }
 
 .gap-x-22 {
   -moz-column-gap: 5.5rem;
-  column-gap: 5.5rem;
+       column-gap: 5.5rem;
 }
 
 .gap-x-24 {
   -moz-column-gap: 6rem;
-  column-gap: 6rem;
+       column-gap: 6rem;
 }
 
 .gap-x-28 {
   -moz-column-gap: 7rem;
-  column-gap: 7rem;
+       column-gap: 7rem;
 }
 
 .gap-x-30 {
   -moz-column-gap: 7.5rem;
-  column-gap: 7.5rem;
+       column-gap: 7.5rem;
 }
 
 .gap-x-32 {
   -moz-column-gap: 8rem;
-  column-gap: 8rem;
+       column-gap: 8rem;
 }
 
 .gap-x-36 {
   -moz-column-gap: 9rem;
-  column-gap: 9rem;
+       column-gap: 9rem;
 }
 
 .gap-x-40 {
   -moz-column-gap: 10rem;
-  column-gap: 10rem;
+       column-gap: 10rem;
 }
 
 .gap-x-44 {
   -moz-column-gap: 11rem;
-  column-gap: 11rem;
+       column-gap: 11rem;
 }
 
 .gap-x-48 {
   -moz-column-gap: 12rem;
-  column-gap: 12rem;
+       column-gap: 12rem;
 }
 
 .gap-x-52 {
   -moz-column-gap: 13rem;
-  column-gap: 13rem;
+       column-gap: 13rem;
 }
 
 .gap-x-56 {
   -moz-column-gap: 14rem;
-  column-gap: 14rem;
+       column-gap: 14rem;
 }
 
 .gap-x-60 {
   -moz-column-gap: 15rem;
-  column-gap: 15rem;
+       column-gap: 15rem;
 }
 
 .gap-x-64 {
   -moz-column-gap: 16rem;
-  column-gap: 16rem;
+       column-gap: 16rem;
 }
 
 .gap-x-72 {
   -moz-column-gap: 18rem;
-  column-gap: 18rem;
+       column-gap: 18rem;
 }
 
 .gap-x-80 {
   -moz-column-gap: 20rem;
-  column-gap: 20rem;
+       column-gap: 20rem;
 }
 
 .gap-x-89 {
   -moz-column-gap: 22.25rem;
-  column-gap: 22.25rem;
+       column-gap: 22.25rem;
 }
 
 .gap-x-96 {
   -moz-column-gap: 24rem;
-  column-gap: 24rem;
+       column-gap: 24rem;
 }
 
 .gap-x-100 {
   -moz-column-gap: 25rem;
-  column-gap: 25rem;
+       column-gap: 25rem;
 }
 
 .gap-x-130 {
   -moz-column-gap: 32.5rem;
-  column-gap: 32.5rem;
+       column-gap: 32.5rem;
 }
 
 .gap-x-px {
   -moz-column-gap: 1px;
-  column-gap: 1px;
+       column-gap: 1px;
 }
 
 .gap-x-0\.5 {
   -moz-column-gap: 0.125rem;
-  column-gap: 0.125rem;
+       column-gap: 0.125rem;
 }
 
 .gap-x-1\.5 {
   -moz-column-gap: 0.375rem;
-  column-gap: 0.375rem;
+       column-gap: 0.375rem;
 }
 
 .gap-x-2\.5 {
   -moz-column-gap: 0.625rem;
-  column-gap: 0.625rem;
+       column-gap: 0.625rem;
 }
 
 .gap-x-3\.5 {
   -moz-column-gap: 0.875rem;
-  column-gap: 0.875rem;
+       column-gap: 0.875rem;
 }
 
 .gap-y-0 {
@@ -22768,12 +22703,12 @@ form textarea::placeholder {
 
 .decoration-slice {
   -webkit-box-decoration-break: slice;
-  box-decoration-break: slice;
+          box-decoration-break: slice;
 }
 
 .decoration-clone {
   -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .bg-auto {
@@ -22814,7 +22749,7 @@ form textarea::placeholder {
 
 .bg-clip-text {
   -webkit-background-clip: text;
-  background-clip: text;
+          background-clip: text;
 }
 
 .bg-bottom {
@@ -22911,72 +22846,72 @@ form textarea::placeholder {
 
 .object-contain {
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 .object-cover {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .object-fill {
   -o-object-fit: fill;
-  object-fit: fill;
+     object-fit: fill;
 }
 
 .object-none {
   -o-object-fit: none;
-  object-fit: none;
+     object-fit: none;
 }
 
 .object-scale-down {
   -o-object-fit: scale-down;
-  object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .object-bottom {
   -o-object-position: bottom;
-  object-position: bottom;
+     object-position: bottom;
 }
 
 .object-center {
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
 }
 
 .object-left {
   -o-object-position: left;
-  object-position: left;
+     object-position: left;
 }
 
 .object-left-bottom {
   -o-object-position: left bottom;
-  object-position: left bottom;
+     object-position: left bottom;
 }
 
 .object-left-top {
   -o-object-position: left top;
-  object-position: left top;
+     object-position: left top;
 }
 
 .object-right {
   -o-object-position: right;
-  object-position: right;
+     object-position: right;
 }
 
 .object-right-bottom {
   -o-object-position: right bottom;
-  object-position: right bottom;
+     object-position: right bottom;
 }
 
 .object-right-top {
   -o-object-position: right top;
-  object-position: right top;
+     object-position: right top;
 }
 
 .object-top {
   -o-object-position: top;
-  object-position: top;
+     object-position: top;
 }
 
 .p-0 {
@@ -24250,29 +24185,15 @@ form textarea::placeholder {
 }
 
 .font-sans {
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    'Noto Sans',
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-serif {
-  font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .font-kufam {
@@ -24404,21 +24325,13 @@ form textarea::placeholder {
   font-style: normal;
 }
 
-.ordinal,
-.slashed-zero,
-.lining-nums,
-.oldstyle-nums,
-.proportional-nums,
-.tabular-nums,
-.diagonal-fractions,
-.stacked-fractions {
-  --tw-ordinal: var(--tw-empty, /*!*/ /*!*/);
-  --tw-slashed-zero: var(--tw-empty, /*!*/ /*!*/);
-  --tw-numeric-figure: var(--tw-empty, /*!*/ /*!*/);
-  --tw-numeric-spacing: var(--tw-empty, /*!*/ /*!*/);
-  --tw-numeric-fraction: var(--tw-empty, /*!*/ /*!*/);
-  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing)
-    var(--tw-numeric-fraction);
+.ordinal, .slashed-zero, .lining-nums, .oldstyle-nums, .proportional-nums, .tabular-nums, .diagonal-fractions, .stacked-fractions {
+  --tw-ordinal: var(--tw-empty,/*!*/ /*!*/);
+  --tw-slashed-zero: var(--tw-empty,/*!*/ /*!*/);
+  --tw-numeric-figure: var(--tw-empty,/*!*/ /*!*/);
+  --tw-numeric-spacing: var(--tw-empty,/*!*/ /*!*/);
+  --tw-numeric-fraction: var(--tw-empty,/*!*/ /*!*/);
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
 .normal-nums {
@@ -24458,7 +24371,7 @@ form textarea::placeholder {
 }
 
 .leading-3 {
-  line-height: 0.75rem;
+  line-height: .75rem;
 }
 
 .leading-4 {
@@ -29673,9 +29586,7 @@ form textarea::placeholder {
   mix-blend-mode: luminosity;
 }
 
-*,
-::before,
-::after {
+*, ::before, ::after {
   --tw-shadow: 0 0 #0000;
 }
 
@@ -29949,10 +29860,8 @@ form textarea::placeholder {
   outline-offset: 2px;
 }
 
-*,
-::before,
-::after {
-  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+*, ::before, ::after {
+  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgba(59, 130, 246, 0.5);
@@ -32583,17 +32492,16 @@ form textarea::placeholder {
 }
 
 .filter {
-  --tw-blur: var(--tw-empty, /*!*/ /*!*/);
-  --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
-  --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
-  --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
-  --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-  --tw-invert: var(--tw-empty, /*!*/ /*!*/);
-  --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
-  --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
-  --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
-    var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  --tw-blur: var(--tw-empty,/*!*/ /*!*/);
+  --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+  --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+  --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+  --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-invert: var(--tw-empty,/*!*/ /*!*/);
+  --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+  --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .filter-none {
@@ -32641,19 +32549,19 @@ form textarea::placeholder {
 }
 
 .brightness-50 {
-  --tw-brightness: brightness(0.5);
+  --tw-brightness: brightness(.5);
 }
 
 .brightness-75 {
-  --tw-brightness: brightness(0.75);
+  --tw-brightness: brightness(.75);
 }
 
 .brightness-90 {
-  --tw-brightness: brightness(0.9);
+  --tw-brightness: brightness(.9);
 }
 
 .brightness-95 {
-  --tw-brightness: brightness(0.95);
+  --tw-brightness: brightness(.95);
 }
 
 .brightness-100 {
@@ -32685,11 +32593,11 @@ form textarea::placeholder {
 }
 
 .contrast-50 {
-  --tw-contrast: contrast(0.5);
+  --tw-contrast: contrast(.5);
 }
 
 .contrast-75 {
-  --tw-contrast: contrast(0.75);
+  --tw-contrast: contrast(.75);
 }
 
 .contrast-100 {
@@ -32709,7 +32617,7 @@ form textarea::placeholder {
 }
 
 .drop-shadow-sm {
-  --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
+  --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
 }
 
 .drop-shadow {
@@ -32801,7 +32709,7 @@ form textarea::placeholder {
 }
 
 .saturate-50 {
-  --tw-saturate: saturate(0.5);
+  --tw-saturate: saturate(.5);
 }
 
 .saturate-100 {
@@ -32825,26 +32733,22 @@ form textarea::placeholder {
 }
 
 .backdrop-filter {
-  --tw-backdrop-blur: var(--tw-empty, /*!*/ /*!*/);
-  --tw-backdrop-brightness: var(--tw-empty, /*!*/ /*!*/);
-  --tw-backdrop-contrast: var(--tw-empty, /*!*/ /*!*/);
-  --tw-backdrop-grayscale: var(--tw-empty, /*!*/ /*!*/);
-  --tw-backdrop-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-  --tw-backdrop-invert: var(--tw-empty, /*!*/ /*!*/);
-  --tw-backdrop-opacity: var(--tw-empty, /*!*/ /*!*/);
-  --tw-backdrop-saturate: var(--tw-empty, /*!*/ /*!*/);
-  --tw-backdrop-sepia: var(--tw-empty, /*!*/ /*!*/);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-    var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-    var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-    var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-    var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  --tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .backdrop-filter-none {
   -webkit-backdrop-filter: none;
-  backdrop-filter: none;
+          backdrop-filter: none;
 }
 
 .backdrop-blur-0 {
@@ -32888,19 +32792,19 @@ form textarea::placeholder {
 }
 
 .backdrop-brightness-50 {
-  --tw-backdrop-brightness: brightness(0.5);
+  --tw-backdrop-brightness: brightness(.5);
 }
 
 .backdrop-brightness-75 {
-  --tw-backdrop-brightness: brightness(0.75);
+  --tw-backdrop-brightness: brightness(.75);
 }
 
 .backdrop-brightness-90 {
-  --tw-backdrop-brightness: brightness(0.9);
+  --tw-backdrop-brightness: brightness(.9);
 }
 
 .backdrop-brightness-95 {
-  --tw-backdrop-brightness: brightness(0.95);
+  --tw-backdrop-brightness: brightness(.95);
 }
 
 .backdrop-brightness-100 {
@@ -32932,11 +32836,11 @@ form textarea::placeholder {
 }
 
 .backdrop-contrast-50 {
-  --tw-backdrop-contrast: contrast(0.5);
+  --tw-backdrop-contrast: contrast(.5);
 }
 
 .backdrop-contrast-75 {
-  --tw-backdrop-contrast: contrast(0.75);
+  --tw-backdrop-contrast: contrast(.75);
 }
 
 .backdrop-contrast-100 {
@@ -33080,7 +32984,7 @@ form textarea::placeholder {
 }
 
 .backdrop-saturate-50 {
-  --tw-backdrop-saturate: saturate(0.5);
+  --tw-backdrop-saturate: saturate(.5);
 }
 
 .backdrop-saturate-100 {
@@ -33114,31 +33018,9 @@ form textarea::placeholder {
 }
 
 .transition {
-  transition-property:
-    background-color,
-    border-color,
-    color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    -webkit-backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter;
-  transition-property:
-    background-color,
-    border-color,
-    color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    backdrop-filter,
-    -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -33251,6 +33133,30 @@ form textarea::placeholder {
   content: none;
 }
 
+/* custom css */
+
+.custom-h1 {
+  font-size: 6em;
+  font-weight: 700;
+  color: white;
+  font-family: Rubik, sans-serif;
+  /* font-family: 'proxima-nova', sans-serif; */
+  line-height: 1em;
+}
+
+.hero-text {
+  font-size: 5em;
+  font-weight: 700;
+  margin: 40px 0 16px;
+  line-height: 1em;
+}
+
+@media (max-width: 800px) {
+  .hero-text {
+    font-size: 3em;
+  }
+}
+
 .hero-img {
   background-image: url(../images/people-having-fun.jpg);
   background-position: center;
@@ -33291,6 +33197,13 @@ form textarea::placeholder {
 .mobile-nav-background {
   background-color: #111827;
 }
+
+/* #growth-tips {
+  background-color: red;
+  border-color: black;
+  border-width: 4px;
+  border-style: solid;  
+} */
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -40574,8 +40487,7 @@ form textarea::placeholder {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
-      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .sm\:transform-gpu {
@@ -40586,8 +40498,7 @@ form textarea::placeholder {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate))
-      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .sm\:transform-none {
@@ -43372,23 +43283,23 @@ form textarea::placeholder {
   }
 
   .sm\:scale-50 {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .sm\:scale-75 {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .sm\:scale-90 {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .sm\:scale-95 {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .sm\:scale-100 {
@@ -43422,23 +43333,23 @@ form textarea::placeholder {
   }
 
   .sm\:hover\:scale-50:hover {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .sm\:hover\:scale-75:hover {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .sm\:hover\:scale-90:hover {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .sm\:hover\:scale-95:hover {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .sm\:hover\:scale-100:hover {
@@ -43472,23 +43383,23 @@ form textarea::placeholder {
   }
 
   .sm\:focus\:scale-50:focus {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .sm\:focus\:scale-75:focus {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .sm\:focus\:scale-90:focus {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .sm\:focus\:scale-95:focus {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .sm\:focus\:scale-100:focus {
@@ -43521,19 +43432,19 @@ form textarea::placeholder {
   }
 
   .sm\:scale-x-50 {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .sm\:scale-x-75 {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .sm\:scale-x-90 {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .sm\:scale-x-95 {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .sm\:scale-x-100 {
@@ -43561,19 +43472,19 @@ form textarea::placeholder {
   }
 
   .sm\:scale-y-50 {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .sm\:scale-y-75 {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .sm\:scale-y-90 {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .sm\:scale-y-95 {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .sm\:scale-y-100 {
@@ -43601,19 +43512,19 @@ form textarea::placeholder {
   }
 
   .sm\:hover\:scale-x-50:hover {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .sm\:hover\:scale-x-75:hover {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .sm\:hover\:scale-x-90:hover {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .sm\:hover\:scale-x-95:hover {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .sm\:hover\:scale-x-100:hover {
@@ -43641,19 +43552,19 @@ form textarea::placeholder {
   }
 
   .sm\:hover\:scale-y-50:hover {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .sm\:hover\:scale-y-75:hover {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .sm\:hover\:scale-y-90:hover {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .sm\:hover\:scale-y-95:hover {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .sm\:hover\:scale-y-100:hover {
@@ -43681,19 +43592,19 @@ form textarea::placeholder {
   }
 
   .sm\:focus\:scale-x-50:focus {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .sm\:focus\:scale-x-75:focus {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .sm\:focus\:scale-x-90:focus {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .sm\:focus\:scale-x-95:focus {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .sm\:focus\:scale-x-100:focus {
@@ -43721,19 +43632,19 @@ form textarea::placeholder {
   }
 
   .sm\:focus\:scale-y-50:focus {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .sm\:focus\:scale-y-75:focus {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .sm\:focus\:scale-y-90:focus {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .sm\:focus\:scale-y-95:focus {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .sm\:focus\:scale-y-100:focus {
@@ -43810,26 +43721,26 @@ form textarea::placeholder {
 
   .sm\:select-none {
     -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
 
   .sm\:select-text {
     -webkit-user-select: text;
-    -moz-user-select: text;
-    user-select: text;
+       -moz-user-select: text;
+            user-select: text;
   }
 
   .sm\:select-all {
     -webkit-user-select: all;
-    -moz-user-select: all;
-    user-select: all;
+       -moz-user-select: all;
+            user-select: all;
   }
 
   .sm\:select-auto {
     -webkit-user-select: auto;
-    -moz-user-select: auto;
-    user-select: auto;
+       -moz-user-select: auto;
+            user-select: auto;
   }
 
   .sm\:resize-none {
@@ -43870,8 +43781,8 @@ form textarea::placeholder {
 
   .sm\:appearance-none {
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .sm\:auto-cols-auto {
@@ -44324,207 +44235,207 @@ form textarea::placeholder {
 
   .sm\:gap-x-0 {
     -moz-column-gap: 0px;
-    column-gap: 0px;
+         column-gap: 0px;
   }
 
   .sm\:gap-x-1 {
     -moz-column-gap: 0.25rem;
-    column-gap: 0.25rem;
+         column-gap: 0.25rem;
   }
 
   .sm\:gap-x-2 {
     -moz-column-gap: 0.5rem;
-    column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
 
   .sm\:gap-x-3 {
     -moz-column-gap: 0.75rem;
-    column-gap: 0.75rem;
+         column-gap: 0.75rem;
   }
 
   .sm\:gap-x-4 {
     -moz-column-gap: 1rem;
-    column-gap: 1rem;
+         column-gap: 1rem;
   }
 
   .sm\:gap-x-5 {
     -moz-column-gap: 1.25rem;
-    column-gap: 1.25rem;
+         column-gap: 1.25rem;
   }
 
   .sm\:gap-x-6 {
     -moz-column-gap: 1.5rem;
-    column-gap: 1.5rem;
+         column-gap: 1.5rem;
   }
 
   .sm\:gap-x-7 {
     -moz-column-gap: 1.75rem;
-    column-gap: 1.75rem;
+         column-gap: 1.75rem;
   }
 
   .sm\:gap-x-8 {
     -moz-column-gap: 2rem;
-    column-gap: 2rem;
+         column-gap: 2rem;
   }
 
   .sm\:gap-x-9 {
     -moz-column-gap: 2.25rem;
-    column-gap: 2.25rem;
+         column-gap: 2.25rem;
   }
 
   .sm\:gap-x-10 {
     -moz-column-gap: 2.5rem;
-    column-gap: 2.5rem;
+         column-gap: 2.5rem;
   }
 
   .sm\:gap-x-11 {
     -moz-column-gap: 2.75rem;
-    column-gap: 2.75rem;
+         column-gap: 2.75rem;
   }
 
   .sm\:gap-x-12 {
     -moz-column-gap: 3rem;
-    column-gap: 3rem;
+         column-gap: 3rem;
   }
 
   .sm\:gap-x-14 {
     -moz-column-gap: 3.5rem;
-    column-gap: 3.5rem;
+         column-gap: 3.5rem;
   }
 
   .sm\:gap-x-16 {
     -moz-column-gap: 4rem;
-    column-gap: 4rem;
+         column-gap: 4rem;
   }
 
   .sm\:gap-x-18 {
     -moz-column-gap: 4.5rem;
-    column-gap: 4.5rem;
+         column-gap: 4.5rem;
   }
 
   .sm\:gap-x-20 {
     -moz-column-gap: 5rem;
-    column-gap: 5rem;
+         column-gap: 5rem;
   }
 
   .sm\:gap-x-22 {
     -moz-column-gap: 5.5rem;
-    column-gap: 5.5rem;
+         column-gap: 5.5rem;
   }
 
   .sm\:gap-x-24 {
     -moz-column-gap: 6rem;
-    column-gap: 6rem;
+         column-gap: 6rem;
   }
 
   .sm\:gap-x-28 {
     -moz-column-gap: 7rem;
-    column-gap: 7rem;
+         column-gap: 7rem;
   }
 
   .sm\:gap-x-30 {
     -moz-column-gap: 7.5rem;
-    column-gap: 7.5rem;
+         column-gap: 7.5rem;
   }
 
   .sm\:gap-x-32 {
     -moz-column-gap: 8rem;
-    column-gap: 8rem;
+         column-gap: 8rem;
   }
 
   .sm\:gap-x-36 {
     -moz-column-gap: 9rem;
-    column-gap: 9rem;
+         column-gap: 9rem;
   }
 
   .sm\:gap-x-40 {
     -moz-column-gap: 10rem;
-    column-gap: 10rem;
+         column-gap: 10rem;
   }
 
   .sm\:gap-x-44 {
     -moz-column-gap: 11rem;
-    column-gap: 11rem;
+         column-gap: 11rem;
   }
 
   .sm\:gap-x-48 {
     -moz-column-gap: 12rem;
-    column-gap: 12rem;
+         column-gap: 12rem;
   }
 
   .sm\:gap-x-52 {
     -moz-column-gap: 13rem;
-    column-gap: 13rem;
+         column-gap: 13rem;
   }
 
   .sm\:gap-x-56 {
     -moz-column-gap: 14rem;
-    column-gap: 14rem;
+         column-gap: 14rem;
   }
 
   .sm\:gap-x-60 {
     -moz-column-gap: 15rem;
-    column-gap: 15rem;
+         column-gap: 15rem;
   }
 
   .sm\:gap-x-64 {
     -moz-column-gap: 16rem;
-    column-gap: 16rem;
+         column-gap: 16rem;
   }
 
   .sm\:gap-x-72 {
     -moz-column-gap: 18rem;
-    column-gap: 18rem;
+         column-gap: 18rem;
   }
 
   .sm\:gap-x-80 {
     -moz-column-gap: 20rem;
-    column-gap: 20rem;
+         column-gap: 20rem;
   }
 
   .sm\:gap-x-89 {
     -moz-column-gap: 22.25rem;
-    column-gap: 22.25rem;
+         column-gap: 22.25rem;
   }
 
   .sm\:gap-x-96 {
     -moz-column-gap: 24rem;
-    column-gap: 24rem;
+         column-gap: 24rem;
   }
 
   .sm\:gap-x-100 {
     -moz-column-gap: 25rem;
-    column-gap: 25rem;
+         column-gap: 25rem;
   }
 
   .sm\:gap-x-130 {
     -moz-column-gap: 32.5rem;
-    column-gap: 32.5rem;
+         column-gap: 32.5rem;
   }
 
   .sm\:gap-x-px {
     -moz-column-gap: 1px;
-    column-gap: 1px;
+         column-gap: 1px;
   }
 
   .sm\:gap-x-0\.5 {
     -moz-column-gap: 0.125rem;
-    column-gap: 0.125rem;
+         column-gap: 0.125rem;
   }
 
   .sm\:gap-x-1\.5 {
     -moz-column-gap: 0.375rem;
-    column-gap: 0.375rem;
+         column-gap: 0.375rem;
   }
 
   .sm\:gap-x-2\.5 {
     -moz-column-gap: 0.625rem;
-    column-gap: 0.625rem;
+         column-gap: 0.625rem;
   }
 
   .sm\:gap-x-3\.5 {
     -moz-column-gap: 0.875rem;
-    column-gap: 0.875rem;
+         column-gap: 0.875rem;
   }
 
   .sm\:gap-y-0 {
@@ -55138,12 +55049,12 @@ form textarea::placeholder {
 
   .sm\:decoration-slice {
     -webkit-box-decoration-break: slice;
-    box-decoration-break: slice;
+            box-decoration-break: slice;
   }
 
   .sm\:decoration-clone {
     -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+            box-decoration-break: clone;
   }
 
   .sm\:bg-auto {
@@ -55184,7 +55095,7 @@ form textarea::placeholder {
 
   .sm\:bg-clip-text {
     -webkit-background-clip: text;
-    background-clip: text;
+            background-clip: text;
   }
 
   .sm\:bg-bottom {
@@ -55281,72 +55192,72 @@ form textarea::placeholder {
 
   .sm\:object-contain {
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
 
   .sm\:object-cover {
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
 
   .sm\:object-fill {
     -o-object-fit: fill;
-    object-fit: fill;
+       object-fit: fill;
   }
 
   .sm\:object-none {
     -o-object-fit: none;
-    object-fit: none;
+       object-fit: none;
   }
 
   .sm\:object-scale-down {
     -o-object-fit: scale-down;
-    object-fit: scale-down;
+       object-fit: scale-down;
   }
 
   .sm\:object-bottom {
     -o-object-position: bottom;
-    object-position: bottom;
+       object-position: bottom;
   }
 
   .sm\:object-center {
     -o-object-position: center;
-    object-position: center;
+       object-position: center;
   }
 
   .sm\:object-left {
     -o-object-position: left;
-    object-position: left;
+       object-position: left;
   }
 
   .sm\:object-left-bottom {
     -o-object-position: left bottom;
-    object-position: left bottom;
+       object-position: left bottom;
   }
 
   .sm\:object-left-top {
     -o-object-position: left top;
-    object-position: left top;
+       object-position: left top;
   }
 
   .sm\:object-right {
     -o-object-position: right;
-    object-position: right;
+       object-position: right;
   }
 
   .sm\:object-right-bottom {
     -o-object-position: right bottom;
-    object-position: right bottom;
+       object-position: right bottom;
   }
 
   .sm\:object-right-top {
     -o-object-position: right top;
-    object-position: right top;
+       object-position: right top;
   }
 
   .sm\:object-top {
     -o-object-position: top;
-    object-position: top;
+       object-position: top;
   }
 
   .sm\:p-0 {
@@ -56620,29 +56531,15 @@ form textarea::placeholder {
   }
 
   .sm\:font-sans {
-    font-family:
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      'Noto Sans',
-      sans-serif,
-      'Apple Color Emoji',
-      'Segoe UI Emoji',
-      'Segoe UI Symbol',
-      'Noto Color Emoji';
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .sm\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .sm\:font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .sm\:font-kufam {
@@ -56774,21 +56671,13 @@ form textarea::placeholder {
     font-style: normal;
   }
 
-  .sm\:ordinal,
-  .sm\:slashed-zero,
-  .sm\:lining-nums,
-  .sm\:oldstyle-nums,
-  .sm\:proportional-nums,
-  .sm\:tabular-nums,
-  .sm\:diagonal-fractions,
-  .sm\:stacked-fractions {
-    --tw-ordinal: var(--tw-empty, /*!*/ /*!*/);
-    --tw-slashed-zero: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-figure: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-spacing: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-fraction: var(--tw-empty, /*!*/ /*!*/);
-    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing)
-      var(--tw-numeric-fraction);
+  .sm\:ordinal, .sm\:slashed-zero, .sm\:lining-nums, .sm\:oldstyle-nums, .sm\:proportional-nums, .sm\:tabular-nums, .sm\:diagonal-fractions, .sm\:stacked-fractions {
+    --tw-ordinal: var(--tw-empty,/*!*/ /*!*/);
+    --tw-slashed-zero: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-figure: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-spacing: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-fraction: var(--tw-empty,/*!*/ /*!*/);
+    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
   }
 
   .sm\:normal-nums {
@@ -56828,7 +56717,7 @@ form textarea::placeholder {
   }
 
   .sm\:leading-3 {
-    line-height: 0.75rem;
+    line-height: .75rem;
   }
 
   .sm\:leading-4 {
@@ -64600,17 +64489,16 @@ form textarea::placeholder {
   }
 
   .sm\:filter {
-    --tw-blur: var(--tw-empty, /*!*/ /*!*/);
-    --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
-    --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
-    --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
-    --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-invert: var(--tw-empty, /*!*/ /*!*/);
-    --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
-    --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
-      var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    --tw-blur: var(--tw-empty,/*!*/ /*!*/);
+    --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+    --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+    --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+    --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-invert: var(--tw-empty,/*!*/ /*!*/);
+    --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+    --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
   .sm\:filter-none {
@@ -64658,19 +64546,19 @@ form textarea::placeholder {
   }
 
   .sm\:brightness-50 {
-    --tw-brightness: brightness(0.5);
+    --tw-brightness: brightness(.5);
   }
 
   .sm\:brightness-75 {
-    --tw-brightness: brightness(0.75);
+    --tw-brightness: brightness(.75);
   }
 
   .sm\:brightness-90 {
-    --tw-brightness: brightness(0.9);
+    --tw-brightness: brightness(.9);
   }
 
   .sm\:brightness-95 {
-    --tw-brightness: brightness(0.95);
+    --tw-brightness: brightness(.95);
   }
 
   .sm\:brightness-100 {
@@ -64702,11 +64590,11 @@ form textarea::placeholder {
   }
 
   .sm\:contrast-50 {
-    --tw-contrast: contrast(0.5);
+    --tw-contrast: contrast(.5);
   }
 
   .sm\:contrast-75 {
-    --tw-contrast: contrast(0.75);
+    --tw-contrast: contrast(.75);
   }
 
   .sm\:contrast-100 {
@@ -64726,7 +64614,7 @@ form textarea::placeholder {
   }
 
   .sm\:drop-shadow-sm {
-    --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
+    --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
   }
 
   .sm\:drop-shadow {
@@ -64818,7 +64706,7 @@ form textarea::placeholder {
   }
 
   .sm\:saturate-50 {
-    --tw-saturate: saturate(0.5);
+    --tw-saturate: saturate(.5);
   }
 
   .sm\:saturate-100 {
@@ -64842,26 +64730,22 @@ form textarea::placeholder {
   }
 
   .sm\:backdrop-filter {
-    --tw-backdrop-blur: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-brightness: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-contrast: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-grayscale: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-invert: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-opacity: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-saturate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-sepia: var(--tw-empty, /*!*/ /*!*/);
-    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    --tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
 
   .sm\:backdrop-filter-none {
     -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+            backdrop-filter: none;
   }
 
   .sm\:backdrop-blur-0 {
@@ -64905,19 +64789,19 @@ form textarea::placeholder {
   }
 
   .sm\:backdrop-brightness-50 {
-    --tw-backdrop-brightness: brightness(0.5);
+    --tw-backdrop-brightness: brightness(.5);
   }
 
   .sm\:backdrop-brightness-75 {
-    --tw-backdrop-brightness: brightness(0.75);
+    --tw-backdrop-brightness: brightness(.75);
   }
 
   .sm\:backdrop-brightness-90 {
-    --tw-backdrop-brightness: brightness(0.9);
+    --tw-backdrop-brightness: brightness(.9);
   }
 
   .sm\:backdrop-brightness-95 {
-    --tw-backdrop-brightness: brightness(0.95);
+    --tw-backdrop-brightness: brightness(.95);
   }
 
   .sm\:backdrop-brightness-100 {
@@ -64949,11 +64833,11 @@ form textarea::placeholder {
   }
 
   .sm\:backdrop-contrast-50 {
-    --tw-backdrop-contrast: contrast(0.5);
+    --tw-backdrop-contrast: contrast(.5);
   }
 
   .sm\:backdrop-contrast-75 {
-    --tw-backdrop-contrast: contrast(0.75);
+    --tw-backdrop-contrast: contrast(.75);
   }
 
   .sm\:backdrop-contrast-100 {
@@ -65097,7 +64981,7 @@ form textarea::placeholder {
   }
 
   .sm\:backdrop-saturate-50 {
-    --tw-backdrop-saturate: saturate(0.5);
+    --tw-backdrop-saturate: saturate(.5);
   }
 
   .sm\:backdrop-saturate-100 {
@@ -65131,31 +65015,9 @@ form textarea::placeholder {
   }
 
   .sm\:transition {
-    transition-property:
-      background-color,
-      border-color,
-      color,
-      fill,
-      stroke,
-      opacity,
-      box-shadow,
-      transform,
-      filter,
-      -webkit-backdrop-filter;
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter,
-      backdrop-filter;
-    transition-property:
-      background-color,
-      border-color,
-      color,
-      fill,
-      stroke,
-      opacity,
-      box-shadow,
-      transform,
-      filter,
-      backdrop-filter,
-      -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -72547,8 +72409,7 @@ form textarea::placeholder {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
-      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:transform-gpu {
@@ -72559,8 +72420,7 @@ form textarea::placeholder {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate))
-      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:transform-none {
@@ -75345,23 +75205,23 @@ form textarea::placeholder {
   }
 
   .md\:scale-50 {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .md\:scale-75 {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .md\:scale-90 {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .md\:scale-95 {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .md\:scale-100 {
@@ -75395,23 +75255,23 @@ form textarea::placeholder {
   }
 
   .md\:hover\:scale-50:hover {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .md\:hover\:scale-75:hover {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .md\:hover\:scale-90:hover {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .md\:hover\:scale-95:hover {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .md\:hover\:scale-100:hover {
@@ -75445,23 +75305,23 @@ form textarea::placeholder {
   }
 
   .md\:focus\:scale-50:focus {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .md\:focus\:scale-75:focus {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .md\:focus\:scale-90:focus {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .md\:focus\:scale-95:focus {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .md\:focus\:scale-100:focus {
@@ -75494,19 +75354,19 @@ form textarea::placeholder {
   }
 
   .md\:scale-x-50 {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .md\:scale-x-75 {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .md\:scale-x-90 {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .md\:scale-x-95 {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .md\:scale-x-100 {
@@ -75534,19 +75394,19 @@ form textarea::placeholder {
   }
 
   .md\:scale-y-50 {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .md\:scale-y-75 {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .md\:scale-y-90 {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .md\:scale-y-95 {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .md\:scale-y-100 {
@@ -75574,19 +75434,19 @@ form textarea::placeholder {
   }
 
   .md\:hover\:scale-x-50:hover {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .md\:hover\:scale-x-75:hover {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .md\:hover\:scale-x-90:hover {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .md\:hover\:scale-x-95:hover {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .md\:hover\:scale-x-100:hover {
@@ -75614,19 +75474,19 @@ form textarea::placeholder {
   }
 
   .md\:hover\:scale-y-50:hover {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .md\:hover\:scale-y-75:hover {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .md\:hover\:scale-y-90:hover {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .md\:hover\:scale-y-95:hover {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .md\:hover\:scale-y-100:hover {
@@ -75654,19 +75514,19 @@ form textarea::placeholder {
   }
 
   .md\:focus\:scale-x-50:focus {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .md\:focus\:scale-x-75:focus {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .md\:focus\:scale-x-90:focus {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .md\:focus\:scale-x-95:focus {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .md\:focus\:scale-x-100:focus {
@@ -75694,19 +75554,19 @@ form textarea::placeholder {
   }
 
   .md\:focus\:scale-y-50:focus {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .md\:focus\:scale-y-75:focus {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .md\:focus\:scale-y-90:focus {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .md\:focus\:scale-y-95:focus {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .md\:focus\:scale-y-100:focus {
@@ -75783,26 +75643,26 @@ form textarea::placeholder {
 
   .md\:select-none {
     -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
 
   .md\:select-text {
     -webkit-user-select: text;
-    -moz-user-select: text;
-    user-select: text;
+       -moz-user-select: text;
+            user-select: text;
   }
 
   .md\:select-all {
     -webkit-user-select: all;
-    -moz-user-select: all;
-    user-select: all;
+       -moz-user-select: all;
+            user-select: all;
   }
 
   .md\:select-auto {
     -webkit-user-select: auto;
-    -moz-user-select: auto;
-    user-select: auto;
+       -moz-user-select: auto;
+            user-select: auto;
   }
 
   .md\:resize-none {
@@ -75843,8 +75703,8 @@ form textarea::placeholder {
 
   .md\:appearance-none {
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .md\:auto-cols-auto {
@@ -76297,207 +76157,207 @@ form textarea::placeholder {
 
   .md\:gap-x-0 {
     -moz-column-gap: 0px;
-    column-gap: 0px;
+         column-gap: 0px;
   }
 
   .md\:gap-x-1 {
     -moz-column-gap: 0.25rem;
-    column-gap: 0.25rem;
+         column-gap: 0.25rem;
   }
 
   .md\:gap-x-2 {
     -moz-column-gap: 0.5rem;
-    column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
 
   .md\:gap-x-3 {
     -moz-column-gap: 0.75rem;
-    column-gap: 0.75rem;
+         column-gap: 0.75rem;
   }
 
   .md\:gap-x-4 {
     -moz-column-gap: 1rem;
-    column-gap: 1rem;
+         column-gap: 1rem;
   }
 
   .md\:gap-x-5 {
     -moz-column-gap: 1.25rem;
-    column-gap: 1.25rem;
+         column-gap: 1.25rem;
   }
 
   .md\:gap-x-6 {
     -moz-column-gap: 1.5rem;
-    column-gap: 1.5rem;
+         column-gap: 1.5rem;
   }
 
   .md\:gap-x-7 {
     -moz-column-gap: 1.75rem;
-    column-gap: 1.75rem;
+         column-gap: 1.75rem;
   }
 
   .md\:gap-x-8 {
     -moz-column-gap: 2rem;
-    column-gap: 2rem;
+         column-gap: 2rem;
   }
 
   .md\:gap-x-9 {
     -moz-column-gap: 2.25rem;
-    column-gap: 2.25rem;
+         column-gap: 2.25rem;
   }
 
   .md\:gap-x-10 {
     -moz-column-gap: 2.5rem;
-    column-gap: 2.5rem;
+         column-gap: 2.5rem;
   }
 
   .md\:gap-x-11 {
     -moz-column-gap: 2.75rem;
-    column-gap: 2.75rem;
+         column-gap: 2.75rem;
   }
 
   .md\:gap-x-12 {
     -moz-column-gap: 3rem;
-    column-gap: 3rem;
+         column-gap: 3rem;
   }
 
   .md\:gap-x-14 {
     -moz-column-gap: 3.5rem;
-    column-gap: 3.5rem;
+         column-gap: 3.5rem;
   }
 
   .md\:gap-x-16 {
     -moz-column-gap: 4rem;
-    column-gap: 4rem;
+         column-gap: 4rem;
   }
 
   .md\:gap-x-18 {
     -moz-column-gap: 4.5rem;
-    column-gap: 4.5rem;
+         column-gap: 4.5rem;
   }
 
   .md\:gap-x-20 {
     -moz-column-gap: 5rem;
-    column-gap: 5rem;
+         column-gap: 5rem;
   }
 
   .md\:gap-x-22 {
     -moz-column-gap: 5.5rem;
-    column-gap: 5.5rem;
+         column-gap: 5.5rem;
   }
 
   .md\:gap-x-24 {
     -moz-column-gap: 6rem;
-    column-gap: 6rem;
+         column-gap: 6rem;
   }
 
   .md\:gap-x-28 {
     -moz-column-gap: 7rem;
-    column-gap: 7rem;
+         column-gap: 7rem;
   }
 
   .md\:gap-x-30 {
     -moz-column-gap: 7.5rem;
-    column-gap: 7.5rem;
+         column-gap: 7.5rem;
   }
 
   .md\:gap-x-32 {
     -moz-column-gap: 8rem;
-    column-gap: 8rem;
+         column-gap: 8rem;
   }
 
   .md\:gap-x-36 {
     -moz-column-gap: 9rem;
-    column-gap: 9rem;
+         column-gap: 9rem;
   }
 
   .md\:gap-x-40 {
     -moz-column-gap: 10rem;
-    column-gap: 10rem;
+         column-gap: 10rem;
   }
 
   .md\:gap-x-44 {
     -moz-column-gap: 11rem;
-    column-gap: 11rem;
+         column-gap: 11rem;
   }
 
   .md\:gap-x-48 {
     -moz-column-gap: 12rem;
-    column-gap: 12rem;
+         column-gap: 12rem;
   }
 
   .md\:gap-x-52 {
     -moz-column-gap: 13rem;
-    column-gap: 13rem;
+         column-gap: 13rem;
   }
 
   .md\:gap-x-56 {
     -moz-column-gap: 14rem;
-    column-gap: 14rem;
+         column-gap: 14rem;
   }
 
   .md\:gap-x-60 {
     -moz-column-gap: 15rem;
-    column-gap: 15rem;
+         column-gap: 15rem;
   }
 
   .md\:gap-x-64 {
     -moz-column-gap: 16rem;
-    column-gap: 16rem;
+         column-gap: 16rem;
   }
 
   .md\:gap-x-72 {
     -moz-column-gap: 18rem;
-    column-gap: 18rem;
+         column-gap: 18rem;
   }
 
   .md\:gap-x-80 {
     -moz-column-gap: 20rem;
-    column-gap: 20rem;
+         column-gap: 20rem;
   }
 
   .md\:gap-x-89 {
     -moz-column-gap: 22.25rem;
-    column-gap: 22.25rem;
+         column-gap: 22.25rem;
   }
 
   .md\:gap-x-96 {
     -moz-column-gap: 24rem;
-    column-gap: 24rem;
+         column-gap: 24rem;
   }
 
   .md\:gap-x-100 {
     -moz-column-gap: 25rem;
-    column-gap: 25rem;
+         column-gap: 25rem;
   }
 
   .md\:gap-x-130 {
     -moz-column-gap: 32.5rem;
-    column-gap: 32.5rem;
+         column-gap: 32.5rem;
   }
 
   .md\:gap-x-px {
     -moz-column-gap: 1px;
-    column-gap: 1px;
+         column-gap: 1px;
   }
 
   .md\:gap-x-0\.5 {
     -moz-column-gap: 0.125rem;
-    column-gap: 0.125rem;
+         column-gap: 0.125rem;
   }
 
   .md\:gap-x-1\.5 {
     -moz-column-gap: 0.375rem;
-    column-gap: 0.375rem;
+         column-gap: 0.375rem;
   }
 
   .md\:gap-x-2\.5 {
     -moz-column-gap: 0.625rem;
-    column-gap: 0.625rem;
+         column-gap: 0.625rem;
   }
 
   .md\:gap-x-3\.5 {
     -moz-column-gap: 0.875rem;
-    column-gap: 0.875rem;
+         column-gap: 0.875rem;
   }
 
   .md\:gap-y-0 {
@@ -87111,12 +86971,12 @@ form textarea::placeholder {
 
   .md\:decoration-slice {
     -webkit-box-decoration-break: slice;
-    box-decoration-break: slice;
+            box-decoration-break: slice;
   }
 
   .md\:decoration-clone {
     -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+            box-decoration-break: clone;
   }
 
   .md\:bg-auto {
@@ -87157,7 +87017,7 @@ form textarea::placeholder {
 
   .md\:bg-clip-text {
     -webkit-background-clip: text;
-    background-clip: text;
+            background-clip: text;
   }
 
   .md\:bg-bottom {
@@ -87254,72 +87114,72 @@ form textarea::placeholder {
 
   .md\:object-contain {
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
 
   .md\:object-cover {
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
 
   .md\:object-fill {
     -o-object-fit: fill;
-    object-fit: fill;
+       object-fit: fill;
   }
 
   .md\:object-none {
     -o-object-fit: none;
-    object-fit: none;
+       object-fit: none;
   }
 
   .md\:object-scale-down {
     -o-object-fit: scale-down;
-    object-fit: scale-down;
+       object-fit: scale-down;
   }
 
   .md\:object-bottom {
     -o-object-position: bottom;
-    object-position: bottom;
+       object-position: bottom;
   }
 
   .md\:object-center {
     -o-object-position: center;
-    object-position: center;
+       object-position: center;
   }
 
   .md\:object-left {
     -o-object-position: left;
-    object-position: left;
+       object-position: left;
   }
 
   .md\:object-left-bottom {
     -o-object-position: left bottom;
-    object-position: left bottom;
+       object-position: left bottom;
   }
 
   .md\:object-left-top {
     -o-object-position: left top;
-    object-position: left top;
+       object-position: left top;
   }
 
   .md\:object-right {
     -o-object-position: right;
-    object-position: right;
+       object-position: right;
   }
 
   .md\:object-right-bottom {
     -o-object-position: right bottom;
-    object-position: right bottom;
+       object-position: right bottom;
   }
 
   .md\:object-right-top {
     -o-object-position: right top;
-    object-position: right top;
+       object-position: right top;
   }
 
   .md\:object-top {
     -o-object-position: top;
-    object-position: top;
+       object-position: top;
   }
 
   .md\:p-0 {
@@ -88593,29 +88453,15 @@ form textarea::placeholder {
   }
 
   .md\:font-sans {
-    font-family:
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      'Noto Sans',
-      sans-serif,
-      'Apple Color Emoji',
-      'Segoe UI Emoji',
-      'Segoe UI Symbol',
-      'Noto Color Emoji';
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .md\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .md\:font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .md\:font-kufam {
@@ -88747,21 +88593,13 @@ form textarea::placeholder {
     font-style: normal;
   }
 
-  .md\:ordinal,
-  .md\:slashed-zero,
-  .md\:lining-nums,
-  .md\:oldstyle-nums,
-  .md\:proportional-nums,
-  .md\:tabular-nums,
-  .md\:diagonal-fractions,
-  .md\:stacked-fractions {
-    --tw-ordinal: var(--tw-empty, /*!*/ /*!*/);
-    --tw-slashed-zero: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-figure: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-spacing: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-fraction: var(--tw-empty, /*!*/ /*!*/);
-    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing)
-      var(--tw-numeric-fraction);
+  .md\:ordinal, .md\:slashed-zero, .md\:lining-nums, .md\:oldstyle-nums, .md\:proportional-nums, .md\:tabular-nums, .md\:diagonal-fractions, .md\:stacked-fractions {
+    --tw-ordinal: var(--tw-empty,/*!*/ /*!*/);
+    --tw-slashed-zero: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-figure: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-spacing: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-fraction: var(--tw-empty,/*!*/ /*!*/);
+    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
   }
 
   .md\:normal-nums {
@@ -88801,7 +88639,7 @@ form textarea::placeholder {
   }
 
   .md\:leading-3 {
-    line-height: 0.75rem;
+    line-height: .75rem;
   }
 
   .md\:leading-4 {
@@ -96573,17 +96411,16 @@ form textarea::placeholder {
   }
 
   .md\:filter {
-    --tw-blur: var(--tw-empty, /*!*/ /*!*/);
-    --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
-    --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
-    --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
-    --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-invert: var(--tw-empty, /*!*/ /*!*/);
-    --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
-    --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
-      var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    --tw-blur: var(--tw-empty,/*!*/ /*!*/);
+    --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+    --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+    --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+    --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-invert: var(--tw-empty,/*!*/ /*!*/);
+    --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+    --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
   .md\:filter-none {
@@ -96631,19 +96468,19 @@ form textarea::placeholder {
   }
 
   .md\:brightness-50 {
-    --tw-brightness: brightness(0.5);
+    --tw-brightness: brightness(.5);
   }
 
   .md\:brightness-75 {
-    --tw-brightness: brightness(0.75);
+    --tw-brightness: brightness(.75);
   }
 
   .md\:brightness-90 {
-    --tw-brightness: brightness(0.9);
+    --tw-brightness: brightness(.9);
   }
 
   .md\:brightness-95 {
-    --tw-brightness: brightness(0.95);
+    --tw-brightness: brightness(.95);
   }
 
   .md\:brightness-100 {
@@ -96675,11 +96512,11 @@ form textarea::placeholder {
   }
 
   .md\:contrast-50 {
-    --tw-contrast: contrast(0.5);
+    --tw-contrast: contrast(.5);
   }
 
   .md\:contrast-75 {
-    --tw-contrast: contrast(0.75);
+    --tw-contrast: contrast(.75);
   }
 
   .md\:contrast-100 {
@@ -96699,7 +96536,7 @@ form textarea::placeholder {
   }
 
   .md\:drop-shadow-sm {
-    --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
+    --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
   }
 
   .md\:drop-shadow {
@@ -96791,7 +96628,7 @@ form textarea::placeholder {
   }
 
   .md\:saturate-50 {
-    --tw-saturate: saturate(0.5);
+    --tw-saturate: saturate(.5);
   }
 
   .md\:saturate-100 {
@@ -96815,26 +96652,22 @@ form textarea::placeholder {
   }
 
   .md\:backdrop-filter {
-    --tw-backdrop-blur: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-brightness: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-contrast: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-grayscale: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-invert: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-opacity: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-saturate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-sepia: var(--tw-empty, /*!*/ /*!*/);
-    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    --tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
 
   .md\:backdrop-filter-none {
     -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+            backdrop-filter: none;
   }
 
   .md\:backdrop-blur-0 {
@@ -96878,19 +96711,19 @@ form textarea::placeholder {
   }
 
   .md\:backdrop-brightness-50 {
-    --tw-backdrop-brightness: brightness(0.5);
+    --tw-backdrop-brightness: brightness(.5);
   }
 
   .md\:backdrop-brightness-75 {
-    --tw-backdrop-brightness: brightness(0.75);
+    --tw-backdrop-brightness: brightness(.75);
   }
 
   .md\:backdrop-brightness-90 {
-    --tw-backdrop-brightness: brightness(0.9);
+    --tw-backdrop-brightness: brightness(.9);
   }
 
   .md\:backdrop-brightness-95 {
-    --tw-backdrop-brightness: brightness(0.95);
+    --tw-backdrop-brightness: brightness(.95);
   }
 
   .md\:backdrop-brightness-100 {
@@ -96922,11 +96755,11 @@ form textarea::placeholder {
   }
 
   .md\:backdrop-contrast-50 {
-    --tw-backdrop-contrast: contrast(0.5);
+    --tw-backdrop-contrast: contrast(.5);
   }
 
   .md\:backdrop-contrast-75 {
-    --tw-backdrop-contrast: contrast(0.75);
+    --tw-backdrop-contrast: contrast(.75);
   }
 
   .md\:backdrop-contrast-100 {
@@ -97070,7 +96903,7 @@ form textarea::placeholder {
   }
 
   .md\:backdrop-saturate-50 {
-    --tw-backdrop-saturate: saturate(0.5);
+    --tw-backdrop-saturate: saturate(.5);
   }
 
   .md\:backdrop-saturate-100 {
@@ -97104,31 +96937,9 @@ form textarea::placeholder {
   }
 
   .md\:transition {
-    transition-property:
-      background-color,
-      border-color,
-      color,
-      fill,
-      stroke,
-      opacity,
-      box-shadow,
-      transform,
-      filter,
-      -webkit-backdrop-filter;
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter,
-      backdrop-filter;
-    transition-property:
-      background-color,
-      border-color,
-      color,
-      fill,
-      stroke,
-      opacity,
-      box-shadow,
-      transform,
-      filter,
-      backdrop-filter,
-      -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -104520,8 +104331,7 @@ form textarea::placeholder {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
-      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:transform-gpu {
@@ -104532,8 +104342,7 @@ form textarea::placeholder {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate))
-      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:transform-none {
@@ -107318,23 +107127,23 @@ form textarea::placeholder {
   }
 
   .lg\:scale-50 {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .lg\:scale-75 {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .lg\:scale-90 {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .lg\:scale-95 {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .lg\:scale-100 {
@@ -107368,23 +107177,23 @@ form textarea::placeholder {
   }
 
   .lg\:hover\:scale-50:hover {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .lg\:hover\:scale-75:hover {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .lg\:hover\:scale-90:hover {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .lg\:hover\:scale-95:hover {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .lg\:hover\:scale-100:hover {
@@ -107418,23 +107227,23 @@ form textarea::placeholder {
   }
 
   .lg\:focus\:scale-50:focus {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .lg\:focus\:scale-75:focus {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .lg\:focus\:scale-90:focus {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .lg\:focus\:scale-95:focus {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .lg\:focus\:scale-100:focus {
@@ -107467,19 +107276,19 @@ form textarea::placeholder {
   }
 
   .lg\:scale-x-50 {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .lg\:scale-x-75 {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .lg\:scale-x-90 {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .lg\:scale-x-95 {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .lg\:scale-x-100 {
@@ -107507,19 +107316,19 @@ form textarea::placeholder {
   }
 
   .lg\:scale-y-50 {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .lg\:scale-y-75 {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .lg\:scale-y-90 {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .lg\:scale-y-95 {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .lg\:scale-y-100 {
@@ -107547,19 +107356,19 @@ form textarea::placeholder {
   }
 
   .lg\:hover\:scale-x-50:hover {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .lg\:hover\:scale-x-75:hover {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .lg\:hover\:scale-x-90:hover {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .lg\:hover\:scale-x-95:hover {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .lg\:hover\:scale-x-100:hover {
@@ -107587,19 +107396,19 @@ form textarea::placeholder {
   }
 
   .lg\:hover\:scale-y-50:hover {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .lg\:hover\:scale-y-75:hover {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .lg\:hover\:scale-y-90:hover {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .lg\:hover\:scale-y-95:hover {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .lg\:hover\:scale-y-100:hover {
@@ -107627,19 +107436,19 @@ form textarea::placeholder {
   }
 
   .lg\:focus\:scale-x-50:focus {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .lg\:focus\:scale-x-75:focus {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .lg\:focus\:scale-x-90:focus {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .lg\:focus\:scale-x-95:focus {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .lg\:focus\:scale-x-100:focus {
@@ -107667,19 +107476,19 @@ form textarea::placeholder {
   }
 
   .lg\:focus\:scale-y-50:focus {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .lg\:focus\:scale-y-75:focus {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .lg\:focus\:scale-y-90:focus {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .lg\:focus\:scale-y-95:focus {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .lg\:focus\:scale-y-100:focus {
@@ -107756,26 +107565,26 @@ form textarea::placeholder {
 
   .lg\:select-none {
     -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
 
   .lg\:select-text {
     -webkit-user-select: text;
-    -moz-user-select: text;
-    user-select: text;
+       -moz-user-select: text;
+            user-select: text;
   }
 
   .lg\:select-all {
     -webkit-user-select: all;
-    -moz-user-select: all;
-    user-select: all;
+       -moz-user-select: all;
+            user-select: all;
   }
 
   .lg\:select-auto {
     -webkit-user-select: auto;
-    -moz-user-select: auto;
-    user-select: auto;
+       -moz-user-select: auto;
+            user-select: auto;
   }
 
   .lg\:resize-none {
@@ -107816,8 +107625,8 @@ form textarea::placeholder {
 
   .lg\:appearance-none {
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .lg\:auto-cols-auto {
@@ -108270,207 +108079,207 @@ form textarea::placeholder {
 
   .lg\:gap-x-0 {
     -moz-column-gap: 0px;
-    column-gap: 0px;
+         column-gap: 0px;
   }
 
   .lg\:gap-x-1 {
     -moz-column-gap: 0.25rem;
-    column-gap: 0.25rem;
+         column-gap: 0.25rem;
   }
 
   .lg\:gap-x-2 {
     -moz-column-gap: 0.5rem;
-    column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
 
   .lg\:gap-x-3 {
     -moz-column-gap: 0.75rem;
-    column-gap: 0.75rem;
+         column-gap: 0.75rem;
   }
 
   .lg\:gap-x-4 {
     -moz-column-gap: 1rem;
-    column-gap: 1rem;
+         column-gap: 1rem;
   }
 
   .lg\:gap-x-5 {
     -moz-column-gap: 1.25rem;
-    column-gap: 1.25rem;
+         column-gap: 1.25rem;
   }
 
   .lg\:gap-x-6 {
     -moz-column-gap: 1.5rem;
-    column-gap: 1.5rem;
+         column-gap: 1.5rem;
   }
 
   .lg\:gap-x-7 {
     -moz-column-gap: 1.75rem;
-    column-gap: 1.75rem;
+         column-gap: 1.75rem;
   }
 
   .lg\:gap-x-8 {
     -moz-column-gap: 2rem;
-    column-gap: 2rem;
+         column-gap: 2rem;
   }
 
   .lg\:gap-x-9 {
     -moz-column-gap: 2.25rem;
-    column-gap: 2.25rem;
+         column-gap: 2.25rem;
   }
 
   .lg\:gap-x-10 {
     -moz-column-gap: 2.5rem;
-    column-gap: 2.5rem;
+         column-gap: 2.5rem;
   }
 
   .lg\:gap-x-11 {
     -moz-column-gap: 2.75rem;
-    column-gap: 2.75rem;
+         column-gap: 2.75rem;
   }
 
   .lg\:gap-x-12 {
     -moz-column-gap: 3rem;
-    column-gap: 3rem;
+         column-gap: 3rem;
   }
 
   .lg\:gap-x-14 {
     -moz-column-gap: 3.5rem;
-    column-gap: 3.5rem;
+         column-gap: 3.5rem;
   }
 
   .lg\:gap-x-16 {
     -moz-column-gap: 4rem;
-    column-gap: 4rem;
+         column-gap: 4rem;
   }
 
   .lg\:gap-x-18 {
     -moz-column-gap: 4.5rem;
-    column-gap: 4.5rem;
+         column-gap: 4.5rem;
   }
 
   .lg\:gap-x-20 {
     -moz-column-gap: 5rem;
-    column-gap: 5rem;
+         column-gap: 5rem;
   }
 
   .lg\:gap-x-22 {
     -moz-column-gap: 5.5rem;
-    column-gap: 5.5rem;
+         column-gap: 5.5rem;
   }
 
   .lg\:gap-x-24 {
     -moz-column-gap: 6rem;
-    column-gap: 6rem;
+         column-gap: 6rem;
   }
 
   .lg\:gap-x-28 {
     -moz-column-gap: 7rem;
-    column-gap: 7rem;
+         column-gap: 7rem;
   }
 
   .lg\:gap-x-30 {
     -moz-column-gap: 7.5rem;
-    column-gap: 7.5rem;
+         column-gap: 7.5rem;
   }
 
   .lg\:gap-x-32 {
     -moz-column-gap: 8rem;
-    column-gap: 8rem;
+         column-gap: 8rem;
   }
 
   .lg\:gap-x-36 {
     -moz-column-gap: 9rem;
-    column-gap: 9rem;
+         column-gap: 9rem;
   }
 
   .lg\:gap-x-40 {
     -moz-column-gap: 10rem;
-    column-gap: 10rem;
+         column-gap: 10rem;
   }
 
   .lg\:gap-x-44 {
     -moz-column-gap: 11rem;
-    column-gap: 11rem;
+         column-gap: 11rem;
   }
 
   .lg\:gap-x-48 {
     -moz-column-gap: 12rem;
-    column-gap: 12rem;
+         column-gap: 12rem;
   }
 
   .lg\:gap-x-52 {
     -moz-column-gap: 13rem;
-    column-gap: 13rem;
+         column-gap: 13rem;
   }
 
   .lg\:gap-x-56 {
     -moz-column-gap: 14rem;
-    column-gap: 14rem;
+         column-gap: 14rem;
   }
 
   .lg\:gap-x-60 {
     -moz-column-gap: 15rem;
-    column-gap: 15rem;
+         column-gap: 15rem;
   }
 
   .lg\:gap-x-64 {
     -moz-column-gap: 16rem;
-    column-gap: 16rem;
+         column-gap: 16rem;
   }
 
   .lg\:gap-x-72 {
     -moz-column-gap: 18rem;
-    column-gap: 18rem;
+         column-gap: 18rem;
   }
 
   .lg\:gap-x-80 {
     -moz-column-gap: 20rem;
-    column-gap: 20rem;
+         column-gap: 20rem;
   }
 
   .lg\:gap-x-89 {
     -moz-column-gap: 22.25rem;
-    column-gap: 22.25rem;
+         column-gap: 22.25rem;
   }
 
   .lg\:gap-x-96 {
     -moz-column-gap: 24rem;
-    column-gap: 24rem;
+         column-gap: 24rem;
   }
 
   .lg\:gap-x-100 {
     -moz-column-gap: 25rem;
-    column-gap: 25rem;
+         column-gap: 25rem;
   }
 
   .lg\:gap-x-130 {
     -moz-column-gap: 32.5rem;
-    column-gap: 32.5rem;
+         column-gap: 32.5rem;
   }
 
   .lg\:gap-x-px {
     -moz-column-gap: 1px;
-    column-gap: 1px;
+         column-gap: 1px;
   }
 
   .lg\:gap-x-0\.5 {
     -moz-column-gap: 0.125rem;
-    column-gap: 0.125rem;
+         column-gap: 0.125rem;
   }
 
   .lg\:gap-x-1\.5 {
     -moz-column-gap: 0.375rem;
-    column-gap: 0.375rem;
+         column-gap: 0.375rem;
   }
 
   .lg\:gap-x-2\.5 {
     -moz-column-gap: 0.625rem;
-    column-gap: 0.625rem;
+         column-gap: 0.625rem;
   }
 
   .lg\:gap-x-3\.5 {
     -moz-column-gap: 0.875rem;
-    column-gap: 0.875rem;
+         column-gap: 0.875rem;
   }
 
   .lg\:gap-y-0 {
@@ -119084,12 +118893,12 @@ form textarea::placeholder {
 
   .lg\:decoration-slice {
     -webkit-box-decoration-break: slice;
-    box-decoration-break: slice;
+            box-decoration-break: slice;
   }
 
   .lg\:decoration-clone {
     -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+            box-decoration-break: clone;
   }
 
   .lg\:bg-auto {
@@ -119130,7 +118939,7 @@ form textarea::placeholder {
 
   .lg\:bg-clip-text {
     -webkit-background-clip: text;
-    background-clip: text;
+            background-clip: text;
   }
 
   .lg\:bg-bottom {
@@ -119227,72 +119036,72 @@ form textarea::placeholder {
 
   .lg\:object-contain {
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
 
   .lg\:object-cover {
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
 
   .lg\:object-fill {
     -o-object-fit: fill;
-    object-fit: fill;
+       object-fit: fill;
   }
 
   .lg\:object-none {
     -o-object-fit: none;
-    object-fit: none;
+       object-fit: none;
   }
 
   .lg\:object-scale-down {
     -o-object-fit: scale-down;
-    object-fit: scale-down;
+       object-fit: scale-down;
   }
 
   .lg\:object-bottom {
     -o-object-position: bottom;
-    object-position: bottom;
+       object-position: bottom;
   }
 
   .lg\:object-center {
     -o-object-position: center;
-    object-position: center;
+       object-position: center;
   }
 
   .lg\:object-left {
     -o-object-position: left;
-    object-position: left;
+       object-position: left;
   }
 
   .lg\:object-left-bottom {
     -o-object-position: left bottom;
-    object-position: left bottom;
+       object-position: left bottom;
   }
 
   .lg\:object-left-top {
     -o-object-position: left top;
-    object-position: left top;
+       object-position: left top;
   }
 
   .lg\:object-right {
     -o-object-position: right;
-    object-position: right;
+       object-position: right;
   }
 
   .lg\:object-right-bottom {
     -o-object-position: right bottom;
-    object-position: right bottom;
+       object-position: right bottom;
   }
 
   .lg\:object-right-top {
     -o-object-position: right top;
-    object-position: right top;
+       object-position: right top;
   }
 
   .lg\:object-top {
     -o-object-position: top;
-    object-position: top;
+       object-position: top;
   }
 
   .lg\:p-0 {
@@ -120566,29 +120375,15 @@ form textarea::placeholder {
   }
 
   .lg\:font-sans {
-    font-family:
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      'Noto Sans',
-      sans-serif,
-      'Apple Color Emoji',
-      'Segoe UI Emoji',
-      'Segoe UI Symbol',
-      'Noto Color Emoji';
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .lg\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .lg\:font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .lg\:font-kufam {
@@ -120720,21 +120515,13 @@ form textarea::placeholder {
     font-style: normal;
   }
 
-  .lg\:ordinal,
-  .lg\:slashed-zero,
-  .lg\:lining-nums,
-  .lg\:oldstyle-nums,
-  .lg\:proportional-nums,
-  .lg\:tabular-nums,
-  .lg\:diagonal-fractions,
-  .lg\:stacked-fractions {
-    --tw-ordinal: var(--tw-empty, /*!*/ /*!*/);
-    --tw-slashed-zero: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-figure: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-spacing: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-fraction: var(--tw-empty, /*!*/ /*!*/);
-    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing)
-      var(--tw-numeric-fraction);
+  .lg\:ordinal, .lg\:slashed-zero, .lg\:lining-nums, .lg\:oldstyle-nums, .lg\:proportional-nums, .lg\:tabular-nums, .lg\:diagonal-fractions, .lg\:stacked-fractions {
+    --tw-ordinal: var(--tw-empty,/*!*/ /*!*/);
+    --tw-slashed-zero: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-figure: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-spacing: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-fraction: var(--tw-empty,/*!*/ /*!*/);
+    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
   }
 
   .lg\:normal-nums {
@@ -120774,7 +120561,7 @@ form textarea::placeholder {
   }
 
   .lg\:leading-3 {
-    line-height: 0.75rem;
+    line-height: .75rem;
   }
 
   .lg\:leading-4 {
@@ -128546,17 +128333,16 @@ form textarea::placeholder {
   }
 
   .lg\:filter {
-    --tw-blur: var(--tw-empty, /*!*/ /*!*/);
-    --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
-    --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
-    --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
-    --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-invert: var(--tw-empty, /*!*/ /*!*/);
-    --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
-    --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
-      var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    --tw-blur: var(--tw-empty,/*!*/ /*!*/);
+    --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+    --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+    --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+    --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-invert: var(--tw-empty,/*!*/ /*!*/);
+    --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+    --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
   .lg\:filter-none {
@@ -128604,19 +128390,19 @@ form textarea::placeholder {
   }
 
   .lg\:brightness-50 {
-    --tw-brightness: brightness(0.5);
+    --tw-brightness: brightness(.5);
   }
 
   .lg\:brightness-75 {
-    --tw-brightness: brightness(0.75);
+    --tw-brightness: brightness(.75);
   }
 
   .lg\:brightness-90 {
-    --tw-brightness: brightness(0.9);
+    --tw-brightness: brightness(.9);
   }
 
   .lg\:brightness-95 {
-    --tw-brightness: brightness(0.95);
+    --tw-brightness: brightness(.95);
   }
 
   .lg\:brightness-100 {
@@ -128648,11 +128434,11 @@ form textarea::placeholder {
   }
 
   .lg\:contrast-50 {
-    --tw-contrast: contrast(0.5);
+    --tw-contrast: contrast(.5);
   }
 
   .lg\:contrast-75 {
-    --tw-contrast: contrast(0.75);
+    --tw-contrast: contrast(.75);
   }
 
   .lg\:contrast-100 {
@@ -128672,7 +128458,7 @@ form textarea::placeholder {
   }
 
   .lg\:drop-shadow-sm {
-    --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
+    --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
   }
 
   .lg\:drop-shadow {
@@ -128764,7 +128550,7 @@ form textarea::placeholder {
   }
 
   .lg\:saturate-50 {
-    --tw-saturate: saturate(0.5);
+    --tw-saturate: saturate(.5);
   }
 
   .lg\:saturate-100 {
@@ -128788,26 +128574,22 @@ form textarea::placeholder {
   }
 
   .lg\:backdrop-filter {
-    --tw-backdrop-blur: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-brightness: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-contrast: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-grayscale: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-invert: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-opacity: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-saturate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-sepia: var(--tw-empty, /*!*/ /*!*/);
-    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    --tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
 
   .lg\:backdrop-filter-none {
     -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+            backdrop-filter: none;
   }
 
   .lg\:backdrop-blur-0 {
@@ -128851,19 +128633,19 @@ form textarea::placeholder {
   }
 
   .lg\:backdrop-brightness-50 {
-    --tw-backdrop-brightness: brightness(0.5);
+    --tw-backdrop-brightness: brightness(.5);
   }
 
   .lg\:backdrop-brightness-75 {
-    --tw-backdrop-brightness: brightness(0.75);
+    --tw-backdrop-brightness: brightness(.75);
   }
 
   .lg\:backdrop-brightness-90 {
-    --tw-backdrop-brightness: brightness(0.9);
+    --tw-backdrop-brightness: brightness(.9);
   }
 
   .lg\:backdrop-brightness-95 {
-    --tw-backdrop-brightness: brightness(0.95);
+    --tw-backdrop-brightness: brightness(.95);
   }
 
   .lg\:backdrop-brightness-100 {
@@ -128895,11 +128677,11 @@ form textarea::placeholder {
   }
 
   .lg\:backdrop-contrast-50 {
-    --tw-backdrop-contrast: contrast(0.5);
+    --tw-backdrop-contrast: contrast(.5);
   }
 
   .lg\:backdrop-contrast-75 {
-    --tw-backdrop-contrast: contrast(0.75);
+    --tw-backdrop-contrast: contrast(.75);
   }
 
   .lg\:backdrop-contrast-100 {
@@ -129043,7 +128825,7 @@ form textarea::placeholder {
   }
 
   .lg\:backdrop-saturate-50 {
-    --tw-backdrop-saturate: saturate(0.5);
+    --tw-backdrop-saturate: saturate(.5);
   }
 
   .lg\:backdrop-saturate-100 {
@@ -129077,31 +128859,9 @@ form textarea::placeholder {
   }
 
   .lg\:transition {
-    transition-property:
-      background-color,
-      border-color,
-      color,
-      fill,
-      stroke,
-      opacity,
-      box-shadow,
-      transform,
-      filter,
-      -webkit-backdrop-filter;
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter,
-      backdrop-filter;
-    transition-property:
-      background-color,
-      border-color,
-      color,
-      fill,
-      stroke,
-      opacity,
-      box-shadow,
-      transform,
-      filter,
-      backdrop-filter,
-      -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -136493,8 +136253,7 @@ form textarea::placeholder {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
-      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .xl\:transform-gpu {
@@ -136505,8 +136264,7 @@ form textarea::placeholder {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate))
-      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .xl\:transform-none {
@@ -139291,23 +139049,23 @@ form textarea::placeholder {
   }
 
   .xl\:scale-50 {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .xl\:scale-75 {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .xl\:scale-90 {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .xl\:scale-95 {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .xl\:scale-100 {
@@ -139341,23 +139099,23 @@ form textarea::placeholder {
   }
 
   .xl\:hover\:scale-50:hover {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .xl\:hover\:scale-75:hover {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .xl\:hover\:scale-90:hover {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .xl\:hover\:scale-95:hover {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .xl\:hover\:scale-100:hover {
@@ -139391,23 +139149,23 @@ form textarea::placeholder {
   }
 
   .xl\:focus\:scale-50:focus {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .xl\:focus\:scale-75:focus {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .xl\:focus\:scale-90:focus {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .xl\:focus\:scale-95:focus {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .xl\:focus\:scale-100:focus {
@@ -139440,19 +139198,19 @@ form textarea::placeholder {
   }
 
   .xl\:scale-x-50 {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .xl\:scale-x-75 {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .xl\:scale-x-90 {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .xl\:scale-x-95 {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .xl\:scale-x-100 {
@@ -139480,19 +139238,19 @@ form textarea::placeholder {
   }
 
   .xl\:scale-y-50 {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .xl\:scale-y-75 {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .xl\:scale-y-90 {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .xl\:scale-y-95 {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .xl\:scale-y-100 {
@@ -139520,19 +139278,19 @@ form textarea::placeholder {
   }
 
   .xl\:hover\:scale-x-50:hover {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .xl\:hover\:scale-x-75:hover {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .xl\:hover\:scale-x-90:hover {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .xl\:hover\:scale-x-95:hover {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .xl\:hover\:scale-x-100:hover {
@@ -139560,19 +139318,19 @@ form textarea::placeholder {
   }
 
   .xl\:hover\:scale-y-50:hover {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .xl\:hover\:scale-y-75:hover {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .xl\:hover\:scale-y-90:hover {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .xl\:hover\:scale-y-95:hover {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .xl\:hover\:scale-y-100:hover {
@@ -139600,19 +139358,19 @@ form textarea::placeholder {
   }
 
   .xl\:focus\:scale-x-50:focus {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .xl\:focus\:scale-x-75:focus {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .xl\:focus\:scale-x-90:focus {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .xl\:focus\:scale-x-95:focus {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .xl\:focus\:scale-x-100:focus {
@@ -139640,19 +139398,19 @@ form textarea::placeholder {
   }
 
   .xl\:focus\:scale-y-50:focus {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .xl\:focus\:scale-y-75:focus {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .xl\:focus\:scale-y-90:focus {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .xl\:focus\:scale-y-95:focus {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .xl\:focus\:scale-y-100:focus {
@@ -139729,26 +139487,26 @@ form textarea::placeholder {
 
   .xl\:select-none {
     -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
 
   .xl\:select-text {
     -webkit-user-select: text;
-    -moz-user-select: text;
-    user-select: text;
+       -moz-user-select: text;
+            user-select: text;
   }
 
   .xl\:select-all {
     -webkit-user-select: all;
-    -moz-user-select: all;
-    user-select: all;
+       -moz-user-select: all;
+            user-select: all;
   }
 
   .xl\:select-auto {
     -webkit-user-select: auto;
-    -moz-user-select: auto;
-    user-select: auto;
+       -moz-user-select: auto;
+            user-select: auto;
   }
 
   .xl\:resize-none {
@@ -139789,8 +139547,8 @@ form textarea::placeholder {
 
   .xl\:appearance-none {
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .xl\:auto-cols-auto {
@@ -140243,207 +140001,207 @@ form textarea::placeholder {
 
   .xl\:gap-x-0 {
     -moz-column-gap: 0px;
-    column-gap: 0px;
+         column-gap: 0px;
   }
 
   .xl\:gap-x-1 {
     -moz-column-gap: 0.25rem;
-    column-gap: 0.25rem;
+         column-gap: 0.25rem;
   }
 
   .xl\:gap-x-2 {
     -moz-column-gap: 0.5rem;
-    column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
 
   .xl\:gap-x-3 {
     -moz-column-gap: 0.75rem;
-    column-gap: 0.75rem;
+         column-gap: 0.75rem;
   }
 
   .xl\:gap-x-4 {
     -moz-column-gap: 1rem;
-    column-gap: 1rem;
+         column-gap: 1rem;
   }
 
   .xl\:gap-x-5 {
     -moz-column-gap: 1.25rem;
-    column-gap: 1.25rem;
+         column-gap: 1.25rem;
   }
 
   .xl\:gap-x-6 {
     -moz-column-gap: 1.5rem;
-    column-gap: 1.5rem;
+         column-gap: 1.5rem;
   }
 
   .xl\:gap-x-7 {
     -moz-column-gap: 1.75rem;
-    column-gap: 1.75rem;
+         column-gap: 1.75rem;
   }
 
   .xl\:gap-x-8 {
     -moz-column-gap: 2rem;
-    column-gap: 2rem;
+         column-gap: 2rem;
   }
 
   .xl\:gap-x-9 {
     -moz-column-gap: 2.25rem;
-    column-gap: 2.25rem;
+         column-gap: 2.25rem;
   }
 
   .xl\:gap-x-10 {
     -moz-column-gap: 2.5rem;
-    column-gap: 2.5rem;
+         column-gap: 2.5rem;
   }
 
   .xl\:gap-x-11 {
     -moz-column-gap: 2.75rem;
-    column-gap: 2.75rem;
+         column-gap: 2.75rem;
   }
 
   .xl\:gap-x-12 {
     -moz-column-gap: 3rem;
-    column-gap: 3rem;
+         column-gap: 3rem;
   }
 
   .xl\:gap-x-14 {
     -moz-column-gap: 3.5rem;
-    column-gap: 3.5rem;
+         column-gap: 3.5rem;
   }
 
   .xl\:gap-x-16 {
     -moz-column-gap: 4rem;
-    column-gap: 4rem;
+         column-gap: 4rem;
   }
 
   .xl\:gap-x-18 {
     -moz-column-gap: 4.5rem;
-    column-gap: 4.5rem;
+         column-gap: 4.5rem;
   }
 
   .xl\:gap-x-20 {
     -moz-column-gap: 5rem;
-    column-gap: 5rem;
+         column-gap: 5rem;
   }
 
   .xl\:gap-x-22 {
     -moz-column-gap: 5.5rem;
-    column-gap: 5.5rem;
+         column-gap: 5.5rem;
   }
 
   .xl\:gap-x-24 {
     -moz-column-gap: 6rem;
-    column-gap: 6rem;
+         column-gap: 6rem;
   }
 
   .xl\:gap-x-28 {
     -moz-column-gap: 7rem;
-    column-gap: 7rem;
+         column-gap: 7rem;
   }
 
   .xl\:gap-x-30 {
     -moz-column-gap: 7.5rem;
-    column-gap: 7.5rem;
+         column-gap: 7.5rem;
   }
 
   .xl\:gap-x-32 {
     -moz-column-gap: 8rem;
-    column-gap: 8rem;
+         column-gap: 8rem;
   }
 
   .xl\:gap-x-36 {
     -moz-column-gap: 9rem;
-    column-gap: 9rem;
+         column-gap: 9rem;
   }
 
   .xl\:gap-x-40 {
     -moz-column-gap: 10rem;
-    column-gap: 10rem;
+         column-gap: 10rem;
   }
 
   .xl\:gap-x-44 {
     -moz-column-gap: 11rem;
-    column-gap: 11rem;
+         column-gap: 11rem;
   }
 
   .xl\:gap-x-48 {
     -moz-column-gap: 12rem;
-    column-gap: 12rem;
+         column-gap: 12rem;
   }
 
   .xl\:gap-x-52 {
     -moz-column-gap: 13rem;
-    column-gap: 13rem;
+         column-gap: 13rem;
   }
 
   .xl\:gap-x-56 {
     -moz-column-gap: 14rem;
-    column-gap: 14rem;
+         column-gap: 14rem;
   }
 
   .xl\:gap-x-60 {
     -moz-column-gap: 15rem;
-    column-gap: 15rem;
+         column-gap: 15rem;
   }
 
   .xl\:gap-x-64 {
     -moz-column-gap: 16rem;
-    column-gap: 16rem;
+         column-gap: 16rem;
   }
 
   .xl\:gap-x-72 {
     -moz-column-gap: 18rem;
-    column-gap: 18rem;
+         column-gap: 18rem;
   }
 
   .xl\:gap-x-80 {
     -moz-column-gap: 20rem;
-    column-gap: 20rem;
+         column-gap: 20rem;
   }
 
   .xl\:gap-x-89 {
     -moz-column-gap: 22.25rem;
-    column-gap: 22.25rem;
+         column-gap: 22.25rem;
   }
 
   .xl\:gap-x-96 {
     -moz-column-gap: 24rem;
-    column-gap: 24rem;
+         column-gap: 24rem;
   }
 
   .xl\:gap-x-100 {
     -moz-column-gap: 25rem;
-    column-gap: 25rem;
+         column-gap: 25rem;
   }
 
   .xl\:gap-x-130 {
     -moz-column-gap: 32.5rem;
-    column-gap: 32.5rem;
+         column-gap: 32.5rem;
   }
 
   .xl\:gap-x-px {
     -moz-column-gap: 1px;
-    column-gap: 1px;
+         column-gap: 1px;
   }
 
   .xl\:gap-x-0\.5 {
     -moz-column-gap: 0.125rem;
-    column-gap: 0.125rem;
+         column-gap: 0.125rem;
   }
 
   .xl\:gap-x-1\.5 {
     -moz-column-gap: 0.375rem;
-    column-gap: 0.375rem;
+         column-gap: 0.375rem;
   }
 
   .xl\:gap-x-2\.5 {
     -moz-column-gap: 0.625rem;
-    column-gap: 0.625rem;
+         column-gap: 0.625rem;
   }
 
   .xl\:gap-x-3\.5 {
     -moz-column-gap: 0.875rem;
-    column-gap: 0.875rem;
+         column-gap: 0.875rem;
   }
 
   .xl\:gap-y-0 {
@@ -151057,12 +150815,12 @@ form textarea::placeholder {
 
   .xl\:decoration-slice {
     -webkit-box-decoration-break: slice;
-    box-decoration-break: slice;
+            box-decoration-break: slice;
   }
 
   .xl\:decoration-clone {
     -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+            box-decoration-break: clone;
   }
 
   .xl\:bg-auto {
@@ -151103,7 +150861,7 @@ form textarea::placeholder {
 
   .xl\:bg-clip-text {
     -webkit-background-clip: text;
-    background-clip: text;
+            background-clip: text;
   }
 
   .xl\:bg-bottom {
@@ -151200,72 +150958,72 @@ form textarea::placeholder {
 
   .xl\:object-contain {
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
 
   .xl\:object-cover {
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
 
   .xl\:object-fill {
     -o-object-fit: fill;
-    object-fit: fill;
+       object-fit: fill;
   }
 
   .xl\:object-none {
     -o-object-fit: none;
-    object-fit: none;
+       object-fit: none;
   }
 
   .xl\:object-scale-down {
     -o-object-fit: scale-down;
-    object-fit: scale-down;
+       object-fit: scale-down;
   }
 
   .xl\:object-bottom {
     -o-object-position: bottom;
-    object-position: bottom;
+       object-position: bottom;
   }
 
   .xl\:object-center {
     -o-object-position: center;
-    object-position: center;
+       object-position: center;
   }
 
   .xl\:object-left {
     -o-object-position: left;
-    object-position: left;
+       object-position: left;
   }
 
   .xl\:object-left-bottom {
     -o-object-position: left bottom;
-    object-position: left bottom;
+       object-position: left bottom;
   }
 
   .xl\:object-left-top {
     -o-object-position: left top;
-    object-position: left top;
+       object-position: left top;
   }
 
   .xl\:object-right {
     -o-object-position: right;
-    object-position: right;
+       object-position: right;
   }
 
   .xl\:object-right-bottom {
     -o-object-position: right bottom;
-    object-position: right bottom;
+       object-position: right bottom;
   }
 
   .xl\:object-right-top {
     -o-object-position: right top;
-    object-position: right top;
+       object-position: right top;
   }
 
   .xl\:object-top {
     -o-object-position: top;
-    object-position: top;
+       object-position: top;
   }
 
   .xl\:p-0 {
@@ -152539,29 +152297,15 @@ form textarea::placeholder {
   }
 
   .xl\:font-sans {
-    font-family:
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      'Noto Sans',
-      sans-serif,
-      'Apple Color Emoji',
-      'Segoe UI Emoji',
-      'Segoe UI Symbol',
-      'Noto Color Emoji';
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .xl\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .xl\:font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .xl\:font-kufam {
@@ -152693,21 +152437,13 @@ form textarea::placeholder {
     font-style: normal;
   }
 
-  .xl\:ordinal,
-  .xl\:slashed-zero,
-  .xl\:lining-nums,
-  .xl\:oldstyle-nums,
-  .xl\:proportional-nums,
-  .xl\:tabular-nums,
-  .xl\:diagonal-fractions,
-  .xl\:stacked-fractions {
-    --tw-ordinal: var(--tw-empty, /*!*/ /*!*/);
-    --tw-slashed-zero: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-figure: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-spacing: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-fraction: var(--tw-empty, /*!*/ /*!*/);
-    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing)
-      var(--tw-numeric-fraction);
+  .xl\:ordinal, .xl\:slashed-zero, .xl\:lining-nums, .xl\:oldstyle-nums, .xl\:proportional-nums, .xl\:tabular-nums, .xl\:diagonal-fractions, .xl\:stacked-fractions {
+    --tw-ordinal: var(--tw-empty,/*!*/ /*!*/);
+    --tw-slashed-zero: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-figure: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-spacing: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-fraction: var(--tw-empty,/*!*/ /*!*/);
+    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
   }
 
   .xl\:normal-nums {
@@ -152747,7 +152483,7 @@ form textarea::placeholder {
   }
 
   .xl\:leading-3 {
-    line-height: 0.75rem;
+    line-height: .75rem;
   }
 
   .xl\:leading-4 {
@@ -160519,17 +160255,16 @@ form textarea::placeholder {
   }
 
   .xl\:filter {
-    --tw-blur: var(--tw-empty, /*!*/ /*!*/);
-    --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
-    --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
-    --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
-    --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-invert: var(--tw-empty, /*!*/ /*!*/);
-    --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
-    --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
-      var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    --tw-blur: var(--tw-empty,/*!*/ /*!*/);
+    --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+    --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+    --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+    --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-invert: var(--tw-empty,/*!*/ /*!*/);
+    --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+    --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
   .xl\:filter-none {
@@ -160577,19 +160312,19 @@ form textarea::placeholder {
   }
 
   .xl\:brightness-50 {
-    --tw-brightness: brightness(0.5);
+    --tw-brightness: brightness(.5);
   }
 
   .xl\:brightness-75 {
-    --tw-brightness: brightness(0.75);
+    --tw-brightness: brightness(.75);
   }
 
   .xl\:brightness-90 {
-    --tw-brightness: brightness(0.9);
+    --tw-brightness: brightness(.9);
   }
 
   .xl\:brightness-95 {
-    --tw-brightness: brightness(0.95);
+    --tw-brightness: brightness(.95);
   }
 
   .xl\:brightness-100 {
@@ -160621,11 +160356,11 @@ form textarea::placeholder {
   }
 
   .xl\:contrast-50 {
-    --tw-contrast: contrast(0.5);
+    --tw-contrast: contrast(.5);
   }
 
   .xl\:contrast-75 {
-    --tw-contrast: contrast(0.75);
+    --tw-contrast: contrast(.75);
   }
 
   .xl\:contrast-100 {
@@ -160645,7 +160380,7 @@ form textarea::placeholder {
   }
 
   .xl\:drop-shadow-sm {
-    --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
+    --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
   }
 
   .xl\:drop-shadow {
@@ -160737,7 +160472,7 @@ form textarea::placeholder {
   }
 
   .xl\:saturate-50 {
-    --tw-saturate: saturate(0.5);
+    --tw-saturate: saturate(.5);
   }
 
   .xl\:saturate-100 {
@@ -160761,26 +160496,22 @@ form textarea::placeholder {
   }
 
   .xl\:backdrop-filter {
-    --tw-backdrop-blur: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-brightness: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-contrast: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-grayscale: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-invert: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-opacity: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-saturate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-sepia: var(--tw-empty, /*!*/ /*!*/);
-    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    --tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
 
   .xl\:backdrop-filter-none {
     -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+            backdrop-filter: none;
   }
 
   .xl\:backdrop-blur-0 {
@@ -160824,19 +160555,19 @@ form textarea::placeholder {
   }
 
   .xl\:backdrop-brightness-50 {
-    --tw-backdrop-brightness: brightness(0.5);
+    --tw-backdrop-brightness: brightness(.5);
   }
 
   .xl\:backdrop-brightness-75 {
-    --tw-backdrop-brightness: brightness(0.75);
+    --tw-backdrop-brightness: brightness(.75);
   }
 
   .xl\:backdrop-brightness-90 {
-    --tw-backdrop-brightness: brightness(0.9);
+    --tw-backdrop-brightness: brightness(.9);
   }
 
   .xl\:backdrop-brightness-95 {
-    --tw-backdrop-brightness: brightness(0.95);
+    --tw-backdrop-brightness: brightness(.95);
   }
 
   .xl\:backdrop-brightness-100 {
@@ -160868,11 +160599,11 @@ form textarea::placeholder {
   }
 
   .xl\:backdrop-contrast-50 {
-    --tw-backdrop-contrast: contrast(0.5);
+    --tw-backdrop-contrast: contrast(.5);
   }
 
   .xl\:backdrop-contrast-75 {
-    --tw-backdrop-contrast: contrast(0.75);
+    --tw-backdrop-contrast: contrast(.75);
   }
 
   .xl\:backdrop-contrast-100 {
@@ -161016,7 +160747,7 @@ form textarea::placeholder {
   }
 
   .xl\:backdrop-saturate-50 {
-    --tw-backdrop-saturate: saturate(0.5);
+    --tw-backdrop-saturate: saturate(.5);
   }
 
   .xl\:backdrop-saturate-100 {
@@ -161050,31 +160781,9 @@ form textarea::placeholder {
   }
 
   .xl\:transition {
-    transition-property:
-      background-color,
-      border-color,
-      color,
-      fill,
-      stroke,
-      opacity,
-      box-shadow,
-      transform,
-      filter,
-      -webkit-backdrop-filter;
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter,
-      backdrop-filter;
-    transition-property:
-      background-color,
-      border-color,
-      color,
-      fill,
-      stroke,
-      opacity,
-      box-shadow,
-      transform,
-      filter,
-      backdrop-filter,
-      -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -168466,8 +168175,7 @@ form textarea::placeholder {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
-      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .\32xl\:transform-gpu {
@@ -168478,8 +168186,7 @@ form textarea::placeholder {
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate))
-      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .\32xl\:transform-none {
@@ -171264,23 +170971,23 @@ form textarea::placeholder {
   }
 
   .\32xl\:scale-50 {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .\32xl\:scale-75 {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .\32xl\:scale-90 {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .\32xl\:scale-95 {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .\32xl\:scale-100 {
@@ -171314,23 +171021,23 @@ form textarea::placeholder {
   }
 
   .\32xl\:hover\:scale-50:hover {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .\32xl\:hover\:scale-75:hover {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .\32xl\:hover\:scale-90:hover {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .\32xl\:hover\:scale-95:hover {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .\32xl\:hover\:scale-100:hover {
@@ -171364,23 +171071,23 @@ form textarea::placeholder {
   }
 
   .\32xl\:focus\:scale-50:focus {
-    --tw-scale-x: 0.5;
-    --tw-scale-y: 0.5;
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
   }
 
   .\32xl\:focus\:scale-75:focus {
-    --tw-scale-x: 0.75;
-    --tw-scale-y: 0.75;
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
   }
 
   .\32xl\:focus\:scale-90:focus {
-    --tw-scale-x: 0.9;
-    --tw-scale-y: 0.9;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
   }
 
   .\32xl\:focus\:scale-95:focus {
-    --tw-scale-x: 0.95;
-    --tw-scale-y: 0.95;
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
   }
 
   .\32xl\:focus\:scale-100:focus {
@@ -171413,19 +171120,19 @@ form textarea::placeholder {
   }
 
   .\32xl\:scale-x-50 {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .\32xl\:scale-x-75 {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .\32xl\:scale-x-90 {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .\32xl\:scale-x-95 {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .\32xl\:scale-x-100 {
@@ -171453,19 +171160,19 @@ form textarea::placeholder {
   }
 
   .\32xl\:scale-y-50 {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .\32xl\:scale-y-75 {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .\32xl\:scale-y-90 {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .\32xl\:scale-y-95 {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .\32xl\:scale-y-100 {
@@ -171493,19 +171200,19 @@ form textarea::placeholder {
   }
 
   .\32xl\:hover\:scale-x-50:hover {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .\32xl\:hover\:scale-x-75:hover {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .\32xl\:hover\:scale-x-90:hover {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .\32xl\:hover\:scale-x-95:hover {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .\32xl\:hover\:scale-x-100:hover {
@@ -171533,19 +171240,19 @@ form textarea::placeholder {
   }
 
   .\32xl\:hover\:scale-y-50:hover {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .\32xl\:hover\:scale-y-75:hover {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .\32xl\:hover\:scale-y-90:hover {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .\32xl\:hover\:scale-y-95:hover {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .\32xl\:hover\:scale-y-100:hover {
@@ -171573,19 +171280,19 @@ form textarea::placeholder {
   }
 
   .\32xl\:focus\:scale-x-50:focus {
-    --tw-scale-x: 0.5;
+    --tw-scale-x: .5;
   }
 
   .\32xl\:focus\:scale-x-75:focus {
-    --tw-scale-x: 0.75;
+    --tw-scale-x: .75;
   }
 
   .\32xl\:focus\:scale-x-90:focus {
-    --tw-scale-x: 0.9;
+    --tw-scale-x: .9;
   }
 
   .\32xl\:focus\:scale-x-95:focus {
-    --tw-scale-x: 0.95;
+    --tw-scale-x: .95;
   }
 
   .\32xl\:focus\:scale-x-100:focus {
@@ -171613,19 +171320,19 @@ form textarea::placeholder {
   }
 
   .\32xl\:focus\:scale-y-50:focus {
-    --tw-scale-y: 0.5;
+    --tw-scale-y: .5;
   }
 
   .\32xl\:focus\:scale-y-75:focus {
-    --tw-scale-y: 0.75;
+    --tw-scale-y: .75;
   }
 
   .\32xl\:focus\:scale-y-90:focus {
-    --tw-scale-y: 0.9;
+    --tw-scale-y: .9;
   }
 
   .\32xl\:focus\:scale-y-95:focus {
-    --tw-scale-y: 0.95;
+    --tw-scale-y: .95;
   }
 
   .\32xl\:focus\:scale-y-100:focus {
@@ -171702,26 +171409,26 @@ form textarea::placeholder {
 
   .\32xl\:select-none {
     -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
 
   .\32xl\:select-text {
     -webkit-user-select: text;
-    -moz-user-select: text;
-    user-select: text;
+       -moz-user-select: text;
+            user-select: text;
   }
 
   .\32xl\:select-all {
     -webkit-user-select: all;
-    -moz-user-select: all;
-    user-select: all;
+       -moz-user-select: all;
+            user-select: all;
   }
 
   .\32xl\:select-auto {
     -webkit-user-select: auto;
-    -moz-user-select: auto;
-    user-select: auto;
+       -moz-user-select: auto;
+            user-select: auto;
   }
 
   .\32xl\:resize-none {
@@ -171762,8 +171469,8 @@ form textarea::placeholder {
 
   .\32xl\:appearance-none {
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .\32xl\:auto-cols-auto {
@@ -172216,207 +171923,207 @@ form textarea::placeholder {
 
   .\32xl\:gap-x-0 {
     -moz-column-gap: 0px;
-    column-gap: 0px;
+         column-gap: 0px;
   }
 
   .\32xl\:gap-x-1 {
     -moz-column-gap: 0.25rem;
-    column-gap: 0.25rem;
+         column-gap: 0.25rem;
   }
 
   .\32xl\:gap-x-2 {
     -moz-column-gap: 0.5rem;
-    column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
 
   .\32xl\:gap-x-3 {
     -moz-column-gap: 0.75rem;
-    column-gap: 0.75rem;
+         column-gap: 0.75rem;
   }
 
   .\32xl\:gap-x-4 {
     -moz-column-gap: 1rem;
-    column-gap: 1rem;
+         column-gap: 1rem;
   }
 
   .\32xl\:gap-x-5 {
     -moz-column-gap: 1.25rem;
-    column-gap: 1.25rem;
+         column-gap: 1.25rem;
   }
 
   .\32xl\:gap-x-6 {
     -moz-column-gap: 1.5rem;
-    column-gap: 1.5rem;
+         column-gap: 1.5rem;
   }
 
   .\32xl\:gap-x-7 {
     -moz-column-gap: 1.75rem;
-    column-gap: 1.75rem;
+         column-gap: 1.75rem;
   }
 
   .\32xl\:gap-x-8 {
     -moz-column-gap: 2rem;
-    column-gap: 2rem;
+         column-gap: 2rem;
   }
 
   .\32xl\:gap-x-9 {
     -moz-column-gap: 2.25rem;
-    column-gap: 2.25rem;
+         column-gap: 2.25rem;
   }
 
   .\32xl\:gap-x-10 {
     -moz-column-gap: 2.5rem;
-    column-gap: 2.5rem;
+         column-gap: 2.5rem;
   }
 
   .\32xl\:gap-x-11 {
     -moz-column-gap: 2.75rem;
-    column-gap: 2.75rem;
+         column-gap: 2.75rem;
   }
 
   .\32xl\:gap-x-12 {
     -moz-column-gap: 3rem;
-    column-gap: 3rem;
+         column-gap: 3rem;
   }
 
   .\32xl\:gap-x-14 {
     -moz-column-gap: 3.5rem;
-    column-gap: 3.5rem;
+         column-gap: 3.5rem;
   }
 
   .\32xl\:gap-x-16 {
     -moz-column-gap: 4rem;
-    column-gap: 4rem;
+         column-gap: 4rem;
   }
 
   .\32xl\:gap-x-18 {
     -moz-column-gap: 4.5rem;
-    column-gap: 4.5rem;
+         column-gap: 4.5rem;
   }
 
   .\32xl\:gap-x-20 {
     -moz-column-gap: 5rem;
-    column-gap: 5rem;
+         column-gap: 5rem;
   }
 
   .\32xl\:gap-x-22 {
     -moz-column-gap: 5.5rem;
-    column-gap: 5.5rem;
+         column-gap: 5.5rem;
   }
 
   .\32xl\:gap-x-24 {
     -moz-column-gap: 6rem;
-    column-gap: 6rem;
+         column-gap: 6rem;
   }
 
   .\32xl\:gap-x-28 {
     -moz-column-gap: 7rem;
-    column-gap: 7rem;
+         column-gap: 7rem;
   }
 
   .\32xl\:gap-x-30 {
     -moz-column-gap: 7.5rem;
-    column-gap: 7.5rem;
+         column-gap: 7.5rem;
   }
 
   .\32xl\:gap-x-32 {
     -moz-column-gap: 8rem;
-    column-gap: 8rem;
+         column-gap: 8rem;
   }
 
   .\32xl\:gap-x-36 {
     -moz-column-gap: 9rem;
-    column-gap: 9rem;
+         column-gap: 9rem;
   }
 
   .\32xl\:gap-x-40 {
     -moz-column-gap: 10rem;
-    column-gap: 10rem;
+         column-gap: 10rem;
   }
 
   .\32xl\:gap-x-44 {
     -moz-column-gap: 11rem;
-    column-gap: 11rem;
+         column-gap: 11rem;
   }
 
   .\32xl\:gap-x-48 {
     -moz-column-gap: 12rem;
-    column-gap: 12rem;
+         column-gap: 12rem;
   }
 
   .\32xl\:gap-x-52 {
     -moz-column-gap: 13rem;
-    column-gap: 13rem;
+         column-gap: 13rem;
   }
 
   .\32xl\:gap-x-56 {
     -moz-column-gap: 14rem;
-    column-gap: 14rem;
+         column-gap: 14rem;
   }
 
   .\32xl\:gap-x-60 {
     -moz-column-gap: 15rem;
-    column-gap: 15rem;
+         column-gap: 15rem;
   }
 
   .\32xl\:gap-x-64 {
     -moz-column-gap: 16rem;
-    column-gap: 16rem;
+         column-gap: 16rem;
   }
 
   .\32xl\:gap-x-72 {
     -moz-column-gap: 18rem;
-    column-gap: 18rem;
+         column-gap: 18rem;
   }
 
   .\32xl\:gap-x-80 {
     -moz-column-gap: 20rem;
-    column-gap: 20rem;
+         column-gap: 20rem;
   }
 
   .\32xl\:gap-x-89 {
     -moz-column-gap: 22.25rem;
-    column-gap: 22.25rem;
+         column-gap: 22.25rem;
   }
 
   .\32xl\:gap-x-96 {
     -moz-column-gap: 24rem;
-    column-gap: 24rem;
+         column-gap: 24rem;
   }
 
   .\32xl\:gap-x-100 {
     -moz-column-gap: 25rem;
-    column-gap: 25rem;
+         column-gap: 25rem;
   }
 
   .\32xl\:gap-x-130 {
     -moz-column-gap: 32.5rem;
-    column-gap: 32.5rem;
+         column-gap: 32.5rem;
   }
 
   .\32xl\:gap-x-px {
     -moz-column-gap: 1px;
-    column-gap: 1px;
+         column-gap: 1px;
   }
 
   .\32xl\:gap-x-0\.5 {
     -moz-column-gap: 0.125rem;
-    column-gap: 0.125rem;
+         column-gap: 0.125rem;
   }
 
   .\32xl\:gap-x-1\.5 {
     -moz-column-gap: 0.375rem;
-    column-gap: 0.375rem;
+         column-gap: 0.375rem;
   }
 
   .\32xl\:gap-x-2\.5 {
     -moz-column-gap: 0.625rem;
-    column-gap: 0.625rem;
+         column-gap: 0.625rem;
   }
 
   .\32xl\:gap-x-3\.5 {
     -moz-column-gap: 0.875rem;
-    column-gap: 0.875rem;
+         column-gap: 0.875rem;
   }
 
   .\32xl\:gap-y-0 {
@@ -183030,12 +182737,12 @@ form textarea::placeholder {
 
   .\32xl\:decoration-slice {
     -webkit-box-decoration-break: slice;
-    box-decoration-break: slice;
+            box-decoration-break: slice;
   }
 
   .\32xl\:decoration-clone {
     -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+            box-decoration-break: clone;
   }
 
   .\32xl\:bg-auto {
@@ -183076,7 +182783,7 @@ form textarea::placeholder {
 
   .\32xl\:bg-clip-text {
     -webkit-background-clip: text;
-    background-clip: text;
+            background-clip: text;
   }
 
   .\32xl\:bg-bottom {
@@ -183173,72 +182880,72 @@ form textarea::placeholder {
 
   .\32xl\:object-contain {
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
 
   .\32xl\:object-cover {
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
 
   .\32xl\:object-fill {
     -o-object-fit: fill;
-    object-fit: fill;
+       object-fit: fill;
   }
 
   .\32xl\:object-none {
     -o-object-fit: none;
-    object-fit: none;
+       object-fit: none;
   }
 
   .\32xl\:object-scale-down {
     -o-object-fit: scale-down;
-    object-fit: scale-down;
+       object-fit: scale-down;
   }
 
   .\32xl\:object-bottom {
     -o-object-position: bottom;
-    object-position: bottom;
+       object-position: bottom;
   }
 
   .\32xl\:object-center {
     -o-object-position: center;
-    object-position: center;
+       object-position: center;
   }
 
   .\32xl\:object-left {
     -o-object-position: left;
-    object-position: left;
+       object-position: left;
   }
 
   .\32xl\:object-left-bottom {
     -o-object-position: left bottom;
-    object-position: left bottom;
+       object-position: left bottom;
   }
 
   .\32xl\:object-left-top {
     -o-object-position: left top;
-    object-position: left top;
+       object-position: left top;
   }
 
   .\32xl\:object-right {
     -o-object-position: right;
-    object-position: right;
+       object-position: right;
   }
 
   .\32xl\:object-right-bottom {
     -o-object-position: right bottom;
-    object-position: right bottom;
+       object-position: right bottom;
   }
 
   .\32xl\:object-right-top {
     -o-object-position: right top;
-    object-position: right top;
+       object-position: right top;
   }
 
   .\32xl\:object-top {
     -o-object-position: top;
-    object-position: top;
+       object-position: top;
   }
 
   .\32xl\:p-0 {
@@ -184512,29 +184219,15 @@ form textarea::placeholder {
   }
 
   .\32xl\:font-sans {
-    font-family:
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      'Noto Sans',
-      sans-serif,
-      'Apple Color Emoji',
-      'Segoe UI Emoji',
-      'Segoe UI Symbol',
-      'Noto Color Emoji';
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .\32xl\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
 
   .\32xl\:font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .\32xl\:font-kufam {
@@ -184666,21 +184359,13 @@ form textarea::placeholder {
     font-style: normal;
   }
 
-  .\32xl\:ordinal,
-  .\32xl\:slashed-zero,
-  .\32xl\:lining-nums,
-  .\32xl\:oldstyle-nums,
-  .\32xl\:proportional-nums,
-  .\32xl\:tabular-nums,
-  .\32xl\:diagonal-fractions,
-  .\32xl\:stacked-fractions {
-    --tw-ordinal: var(--tw-empty, /*!*/ /*!*/);
-    --tw-slashed-zero: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-figure: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-spacing: var(--tw-empty, /*!*/ /*!*/);
-    --tw-numeric-fraction: var(--tw-empty, /*!*/ /*!*/);
-    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing)
-      var(--tw-numeric-fraction);
+  .\32xl\:ordinal, .\32xl\:slashed-zero, .\32xl\:lining-nums, .\32xl\:oldstyle-nums, .\32xl\:proportional-nums, .\32xl\:tabular-nums, .\32xl\:diagonal-fractions, .\32xl\:stacked-fractions {
+    --tw-ordinal: var(--tw-empty,/*!*/ /*!*/);
+    --tw-slashed-zero: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-figure: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-spacing: var(--tw-empty,/*!*/ /*!*/);
+    --tw-numeric-fraction: var(--tw-empty,/*!*/ /*!*/);
+    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
   }
 
   .\32xl\:normal-nums {
@@ -184720,7 +184405,7 @@ form textarea::placeholder {
   }
 
   .\32xl\:leading-3 {
-    line-height: 0.75rem;
+    line-height: .75rem;
   }
 
   .\32xl\:leading-4 {
@@ -192492,17 +192177,16 @@ form textarea::placeholder {
   }
 
   .\32xl\:filter {
-    --tw-blur: var(--tw-empty, /*!*/ /*!*/);
-    --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
-    --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
-    --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
-    --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-invert: var(--tw-empty, /*!*/ /*!*/);
-    --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
-    --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
-      var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    --tw-blur: var(--tw-empty,/*!*/ /*!*/);
+    --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+    --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+    --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+    --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-invert: var(--tw-empty,/*!*/ /*!*/);
+    --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+    --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
   .\32xl\:filter-none {
@@ -192550,19 +192234,19 @@ form textarea::placeholder {
   }
 
   .\32xl\:brightness-50 {
-    --tw-brightness: brightness(0.5);
+    --tw-brightness: brightness(.5);
   }
 
   .\32xl\:brightness-75 {
-    --tw-brightness: brightness(0.75);
+    --tw-brightness: brightness(.75);
   }
 
   .\32xl\:brightness-90 {
-    --tw-brightness: brightness(0.9);
+    --tw-brightness: brightness(.9);
   }
 
   .\32xl\:brightness-95 {
-    --tw-brightness: brightness(0.95);
+    --tw-brightness: brightness(.95);
   }
 
   .\32xl\:brightness-100 {
@@ -192594,11 +192278,11 @@ form textarea::placeholder {
   }
 
   .\32xl\:contrast-50 {
-    --tw-contrast: contrast(0.5);
+    --tw-contrast: contrast(.5);
   }
 
   .\32xl\:contrast-75 {
-    --tw-contrast: contrast(0.75);
+    --tw-contrast: contrast(.75);
   }
 
   .\32xl\:contrast-100 {
@@ -192618,7 +192302,7 @@ form textarea::placeholder {
   }
 
   .\32xl\:drop-shadow-sm {
-    --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
+    --tw-drop-shadow: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
   }
 
   .\32xl\:drop-shadow {
@@ -192710,7 +192394,7 @@ form textarea::placeholder {
   }
 
   .\32xl\:saturate-50 {
-    --tw-saturate: saturate(0.5);
+    --tw-saturate: saturate(.5);
   }
 
   .\32xl\:saturate-100 {
@@ -192734,26 +192418,22 @@ form textarea::placeholder {
   }
 
   .\32xl\:backdrop-filter {
-    --tw-backdrop-blur: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-brightness: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-contrast: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-grayscale: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-invert: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-opacity: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-saturate: var(--tw-empty, /*!*/ /*!*/);
-    --tw-backdrop-sepia: var(--tw-empty, /*!*/ /*!*/);
-    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    --tw-backdrop-blur: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-brightness: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-contrast: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-grayscale: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-invert: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-opacity: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-saturate: var(--tw-empty,/*!*/ /*!*/);
+    --tw-backdrop-sepia: var(--tw-empty,/*!*/ /*!*/);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
 
   .\32xl\:backdrop-filter-none {
     -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+            backdrop-filter: none;
   }
 
   .\32xl\:backdrop-blur-0 {
@@ -192797,19 +192477,19 @@ form textarea::placeholder {
   }
 
   .\32xl\:backdrop-brightness-50 {
-    --tw-backdrop-brightness: brightness(0.5);
+    --tw-backdrop-brightness: brightness(.5);
   }
 
   .\32xl\:backdrop-brightness-75 {
-    --tw-backdrop-brightness: brightness(0.75);
+    --tw-backdrop-brightness: brightness(.75);
   }
 
   .\32xl\:backdrop-brightness-90 {
-    --tw-backdrop-brightness: brightness(0.9);
+    --tw-backdrop-brightness: brightness(.9);
   }
 
   .\32xl\:backdrop-brightness-95 {
-    --tw-backdrop-brightness: brightness(0.95);
+    --tw-backdrop-brightness: brightness(.95);
   }
 
   .\32xl\:backdrop-brightness-100 {
@@ -192841,11 +192521,11 @@ form textarea::placeholder {
   }
 
   .\32xl\:backdrop-contrast-50 {
-    --tw-backdrop-contrast: contrast(0.5);
+    --tw-backdrop-contrast: contrast(.5);
   }
 
   .\32xl\:backdrop-contrast-75 {
-    --tw-backdrop-contrast: contrast(0.75);
+    --tw-backdrop-contrast: contrast(.75);
   }
 
   .\32xl\:backdrop-contrast-100 {
@@ -192989,7 +192669,7 @@ form textarea::placeholder {
   }
 
   .\32xl\:backdrop-saturate-50 {
-    --tw-backdrop-saturate: saturate(0.5);
+    --tw-backdrop-saturate: saturate(.5);
   }
 
   .\32xl\:backdrop-saturate-100 {
@@ -193023,31 +192703,9 @@ form textarea::placeholder {
   }
 
   .\32xl\:transition {
-    transition-property:
-      background-color,
-      border-color,
-      color,
-      fill,
-      stroke,
-      opacity,
-      box-shadow,
-      transform,
-      filter,
-      -webkit-backdrop-filter;
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter,
-      backdrop-filter;
-    transition-property:
-      background-color,
-      border-color,
-      color,
-      fill,
-      stroke,
-      opacity,
-      box-shadow,
-      transform,
-      filter,
-      backdrop-filter,
-      -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
@@ -193156,12 +192814,3 @@ form textarea::placeholder {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-/* 
-#growth-tips {
-  height: 400px;
-  margin-right: 500px;
-  padding-right: 500px;
-  border-color: black;
-  border-width: 4px;
-  border-style: solid;  
-} */
