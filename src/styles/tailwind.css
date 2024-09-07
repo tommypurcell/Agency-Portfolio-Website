@@ -42,7 +42,7 @@
   }
 
   form .input-animated label:after {
-    content: "";
+    content: '';
     bottom: -2px;
     border-color: var(--underline);
     @apply absolute w-full h-full border-b-2 left-0 transition duration-300 ease-linear transform -translate-x-full;
@@ -60,16 +60,8 @@
     border-color: var(--error);
   }
 
-  form
-    .input-animated
-    input:not(:placeholder-shown)
-    + .label-name
-    .content-name,
-  form
-    .input-animated
-    input:not(:placeholder-shown)
-    + .label-email
-    .content-email {
+  form .input-animated input:not(:placeholder-shown) + .label-name .content-name,
+  form .input-animated input:not(:placeholder-shown) + .label-email .content-email {
     color: var(--error);
   }
 
@@ -147,30 +139,28 @@
   clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
 }
 
-
 @media screen and (max-width: 1167px) {
   .hero-img {
     -webkit-clip-path: none;
-            clip-path: none;
+    clip-path: none;
   }
 }
 
 /* orange buttons and dark blue backgrounds */
 .more {
-  color: #F28C28
+  color: #f28c28;
 }
 
 .find-out-more {
-  background-color: #F28C28
-
+  background-color: #f28c28;
 }
 
 .cta-bottom {
-  background-color: #111827
+  background-color: #111827;
 }
 
 .cta-bottom a {
-  background-color: #F28C28
+  background-color: #f28c28;
 }
 
 .footer {
@@ -180,7 +170,6 @@
 .mobile-nav-background {
   background-color: #111827;
 }
-
 
 /* #growth-tips {
   background-color: red;
